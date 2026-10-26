@@ -126,7 +126,7 @@ class HomeView(ctk.CTkFrame):
 
         guide = ctk.CTkFrame(inner, fg_color=PALE_GREEN, corner_radius=10)
         guide.grid(row=6, column=0, sticky="ew", pady=(0, 8))
-        ctk.CTkLabel(guide, text="▢", text_color=GREEN, font=(ICON_FONT, 24)).pack(side="left", padx=(18, 14), pady=18)
+        ctk.CTkLabel(guide, text="", text_color=GREEN, font=(ICON_FONT, 24)).pack(side="left", padx=(18, 14), pady=18)
         guide_text = ctk.CTkFrame(guide, fg_color="transparent")
         guide_text.pack(side="left", fill="x", expand=True, pady=20)
         self._label(guide_text, "Del cuento a la conversación", 17, INK, "bold").pack(anchor="w")
@@ -162,7 +162,7 @@ class HomeView(ctk.CTkFrame):
         tags.pack(fill="x", padx=10, pady=(0, 10))
         self._label(tags, grade, 11, GREEN, "bold", fg_color=PALE_GREEN, corner_radius=5, padx=8, pady=3).pack(side="left")
         self._label(tags, category, 11, GREEN, "bold", fg_color=PALE_TAN, corner_radius=5, padx=8, pady=3).pack(side="left", padx=5)
-        ctk.CTkButton(card, text="▣  Ver libro y leer", height=32, corner_radius=6, fg_color=SURFACE, hover_color=PALE_GREEN, border_width=1, border_color=BORDER, text_color=GREEN, font=("Source Sans 3", 12, "bold")).pack(fill="x", padx=10, pady=(0, 10))
+        ctk.CTkButton(card, text="  Ver libro y leer", height=32, corner_radius=6, fg_color=SURFACE, hover_color=PALE_GREEN, border_width=1, border_color=BORDER, text_color=GREEN, font=(ICON_FONT, 12, "bold")).pack(fill="x", padx=10, pady=(0, 10))
         return card
 
     def _layout_cards(self, _event: tk.Event | None = None) -> None:
