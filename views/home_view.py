@@ -29,7 +29,7 @@ class HomeView(ctk.CTkFrame):
         return ctk.CTkLabel(parent, text=text, text_color=color, font=("Source Sans 3", size, weight), **kwargs)
 
     def _build_sidebar(self) -> None:
-        sidebar = ctk.CTkFrame(self, width=224, corner_radius=0, fg_color=SURFACE, border_width=1, border_color=BORDER)
+        sidebar = ctk.CTkFrame(self, width=270, corner_radius=0, fg_color=SURFACE, border_width=1, border_color=BORDER)
         sidebar.grid(row=0, column=0, sticky="nsew")
         sidebar.grid_propagate(False)
         sidebar.grid_rowconfigure(1, weight=1)
