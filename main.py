@@ -7,8 +7,6 @@ def main():
     root = ctk.CTk()
     root.title("Biblioteca del maestro")
     root.geometry("1440x960")
-    root.minsize(1080, 720)
-    root.resizable(True, True)
     HomeView(root).pack(fill="both", expand=True)
 
     root.mainloop()
