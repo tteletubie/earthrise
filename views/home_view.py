@@ -82,7 +82,7 @@ class HomeView(ctk.CTkFrame):
         navigation = ctk.CTkFrame(menu, height=46, fg_color=PALE_GREEN, corner_radius=6)
         navigation.pack(fill="x", pady=(8, 0))
         navigation.pack_propagate(False)
-        self._sidebar_icon(navigation, "library", 20, PALE_GREEN).pack(
+        self._sidebar_svg_icon(navigation, "library", 20, "transparent", GREEN).pack(
             side="left", padx=(11, 0)
         )
         self._label(navigation, "Biblioteca", 15, INK, "bold").pack(
@@ -94,7 +94,7 @@ class HomeView(ctk.CTkFrame):
 
         school = ctk.CTkFrame(bottom, fg_color=BACKGROUND, corner_radius=6)
         school.pack(fill="x", pady=(0, 20))
-        self._sidebar_icon(school, "school", 22, BACKGROUND).pack(
+        self._sidebar_svg_icon(school, "school", 22, "transparent", GREEN).pack(
             anchor="w", padx=14, pady=(14, 0)
         )
         self._label(
@@ -139,32 +139,10 @@ class HomeView(ctk.CTkFrame):
             bottom, fg_color="transparent", corner_radius=0, cursor="hand2"
         )
         logout.pack(fill="x")
-        self._sidebar_icon(logout, "log-out", 17, SURFACE).pack(side="left")
+        self._sidebar_svg_icon(logout, "log-out", 17, "transparent", MUTED).pack(
+            side="left"
+        )
         self._label(logout, "Cerrar sesión", 14, MUTED).pack(side="left", padx=(9, 0))
-
-    def _sidebar_icon(
-        self,
-        parent: tk.Misc,
-        name: str,
-        size: int,
-        background: str,
-        color: str | None = None,
-    ) -> ctk.CTkLabel:
-        image_path = (
-            Path(__file__).parents[1] / "gatito500" / "assets" / "icons" / f"{name}.png"
-        )
-        source = Image.open(image_path).convert("RGBA")
-        if color is not None:
-            alpha = source.getchannel("A")
-            source = Image.new("RGBA", source.size, color)
-            source.putalpha(alpha)
-        image = ctk.CTkImage(
-            light_image=source,
-            dark_image=source,
-            size=(size, size),
-        )
-        self._images.append(image)
-        return ctk.CTkLabel(parent, text="", image=image, fg_color=background)
 
     def _sidebar_svg_icon(
         self,
@@ -177,7 +155,9 @@ class HomeView(ctk.CTkFrame):
         image_path = (
             Path(__file__).parents[1] / "gatito500" / "assets" / "icons" / f"{name}.svg"
         )
-        svg = image_path.read_text(encoding="utf-8").replace("#285344", color)
+        svg = image_path.read_text(encoding="utf-8")
+        for source_color in ("#285344", "#728078"):
+            svg = svg.replace(source_color, color)
         rendered = cairosvg.svg2png(
             bytestring=svg.encode("utf-8"),
             output_width=size,
