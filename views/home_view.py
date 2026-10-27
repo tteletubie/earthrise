@@ -65,10 +65,14 @@ class HomeView(ctk.CTkFrame):
 
         brand = ctk.CTkFrame(top, fg_color="transparent", corner_radius=0)
         brand.pack(fill="x")
-        logo = ctk.CTkFrame(brand, width=39, height=42, fg_color="#E6EDE3", corner_radius=6)
+        logo = ctk.CTkFrame(
+            brand, width=39, height=45, fg_color="#E6EDE3", corner_radius=9
+        )
         logo.pack(side="left")
         logo.pack_propagate(False)
-        self._sidebar_svg_icon(logo, "book-open-1", 25, "transparent", GREEN).pack(expand=True)
+        self._sidebar_svg_icon(logo, "book-open-1", 25, "transparent", GREEN).pack(
+            expand=True
+        )
 
         names = ctk.CTkFrame(brand, fg_color="transparent", corner_radius=0)
         names.pack(side="left", padx=(11, 0))
@@ -119,21 +123,29 @@ class HomeView(ctk.CTkFrame):
 
         user = ctk.CTkFrame(bottom, fg_color="transparent", corner_radius=0)
         user.pack(fill="x", pady=(0, 20))
-        avatar = ctk.CTkLabel(
+        avatar = ctk.CTkFrame(
             user,
-            text="M",
             width=36,
             height=36,
             fg_color=PALE_TAN,
-            text_color=INK,
             corner_radius=18,
-            font=("Source Sans 3", 13, "bold"),
         )
+        avatar.pack_propagate(False)
         avatar.pack(side="left")
+        self._label(
+            avatar,
+            "MG",
+            13,
+            INK,
+            "bold",
+            fg_color="transparent",
+            width=36,
+            height=36,
+        ).pack(expand=True)
         info = ctk.CTkFrame(user, fg_color="transparent", corner_radius=0)
         info.pack(side="left", padx=(10, 0))
-        self._label(info, "María", 14, INK, "bold").pack(anchor="w")
-        self._label(info, "Maestra", 12, MUTED).pack(anchor="w")
+        self._label(info, "María García", 14, INK, "bold", height=20).pack(anchor="w")
+        self._label(info, "Maestra · 2° A", 12, MUTED, height=18).pack(anchor="w")
 
         logout = ctk.CTkFrame(
             bottom, fg_color="transparent", corner_radius=0, cursor="hand2"
