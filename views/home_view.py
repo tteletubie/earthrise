@@ -76,8 +76,8 @@ class HomeView(ctk.CTkFrame):
 
         names = ctk.CTkFrame(brand, fg_color="transparent", corner_radius=0)
         names.pack(side="left", padx=(11, 0))
-        self._label(names, "Entre páginas", 20, INK, "bold").pack(anchor="w")
-        self._label(names, "BANCO DE LIBROS ESCOLAR", 12, MUTED).pack(anchor="w")
+        self._label(names, "Entre páginas", 20, INK, "bold", height=24).pack(anchor="w")
+        self._label(names, "BANCO DE LIBROS ESCOLAR", 12, MUTED, height=20).pack(anchor="w")
 
         menu = ctk.CTkFrame(top, fg_color="transparent", corner_radius=0)
         menu.pack(fill="x", pady=(38, 0))
@@ -123,25 +123,17 @@ class HomeView(ctk.CTkFrame):
 
         user = ctk.CTkFrame(bottom, fg_color="transparent", corner_radius=0)
         user.pack(fill="x", pady=(0, 20))
-        avatar = ctk.CTkFrame(
+        avatar = tk.Canvas(
             user,
             width=36,
             height=36,
-            fg_color=PALE_TAN,
-            corner_radius=18,
+            bg=SURFACE,
+            highlightthickness=0,
+            bd=0,
         )
-        avatar.pack_propagate(False)
+        avatar.create_oval(1, 1, 35, 35, fill=PALE_TAN, outline="")
+        avatar.create_text(18, 18, text="MG", fill=INK, font=("Source Sans 3", 10, "bold"))
         avatar.pack(side="left")
-        self._label(
-            avatar,
-            "MG",
-            13,
-            INK,
-            "bold",
-            fg_color="transparent",
-            width=36,
-            height=36,
-        ).pack(expand=True)
         info = ctk.CTkFrame(user, fg_color="transparent", corner_radius=0)
         info.pack(side="left", padx=(10, 0))
         self._label(info, "María García", 14, INK, "bold", height=20).pack(anchor="w")
