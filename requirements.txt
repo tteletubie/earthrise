@@ -1,3 +1,4 @@
 python-dotenv
 customtkinter>=6.0.0
 pillow
+cairosvg>=2.7

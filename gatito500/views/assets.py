@@ -7,8 +7,12 @@ from config.settings import ICONS_DIR, IMAGES_DIR
 
 
 @lru_cache(maxsize=None)
-def icon(name, size):
+def icon(name, size, color=None):
     img = Image.open(ICONS_DIR / f"{name}.png").convert("RGBA")
+    if color is not None:
+        alpha = img.getchannel("A")
+        img = Image.new("RGBA", img.size, color)
+        img.putalpha(alpha)
     img = img.resize((size, size), Image.LANCZOS)
     return ImageTk.PhotoImage(img)
 

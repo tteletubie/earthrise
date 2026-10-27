@@ -28,7 +28,12 @@ class Sidebar(tk.Frame):
         brand.pack(fill="x")
         logo = Surface(brand, fill=C.sage, radius=6, width=39, height=42)
         logo.pack(side="left")
-        tk.Label(logo.body, image=assets.icon("book-open-1", 25), bg=C.sage, bd=0).pack(expand=True)
+        tk.Label(
+            logo.body,
+            image=assets.icon("book-open-1", 25, C.white),
+            bg=C.sage,
+            bd=0,
+        ).pack(expand=True)
         names = tk.Frame(brand, bg=C.surface)
         names.pack(side="left", padx=(11, 0))
         TextBlock(names, S.BRAND_TITLE, 20, weight=700, color=C.ink, bg=C.surface).pack(anchor="w")
