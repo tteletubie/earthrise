@@ -93,16 +93,28 @@ class HomeView(ctk.CTkFrame):
         self._label(logout, "Cerrar sesión", 14, MUTED).pack(side="left", padx=(9, 0))
 
     def _sidebar_svg_icon(self, parent: tk.Misc, name: str, size: int, background: str, color: str) -> ctk.CTkLabel:
+        image = self._svg_image(name, size, color)
+        return ctk.CTkLabel(parent, text="", image=image, fg_color=background)
+
+    def _svg_image(
+        self,
+        name: str,
+        size: int,
+        color: str,
+        stroke_width: float | None = None,
+    ) -> ctk.CTkImage:
         image_path = Path(__file__).parents[1] / "gatito500" / "assets" / "icons" / f"{name}.svg"
         svg = image_path.read_text(encoding="utf-8")
         for source_color in ("#285344", "#728078"):
             svg = svg.replace(source_color, color)
+        if stroke_width is not None:
+            svg = svg.replace('stroke-width="1.7"', f'stroke-width="{stroke_width}"')
             
         rendered = cairosvg.svg2png(bytestring=svg.encode("utf-8"), output_width=size, output_height=size)
         source = Image.open(BytesIO(rendered)).convert("RGBA")
         image = ctk.CTkImage(light_image=source, dark_image=source, size=(size, size))
         self._images.append(image)
-        return ctk.CTkLabel(parent, text="", image=image, fg_color=background)
+        return image
 
     def _build_workspace(self) -> None:
         workspace = ctk.CTkFrame(self, fg_color=BACKGROUND, corner_radius=0)
@@ -175,17 +187,16 @@ class HomeView(ctk.CTkFrame):
         page_buttons.pack(side="right")
         
         for text, selected in [("Anterior", False), ("1", True), ("2", False), ("3", False), ("Siguiente", False)]:
-            ctk.CTkButton(page_buttons, text=text, width=44 if len(text) == 1 else (74 if text == "Siguiente" else 76), height=34, corner_radius=6, fg_color=GREEN if selected else SURFACE, hover_color=PALE_GREEN, border_width=0 if selected else 1, border_color=BORDER, text_color="white" if selected else GREEN, font=("Source Sans 3", 12, "bold")).pack(side="left", padx=(0, 7))
+            ctk.CTkButton(page_buttons, text=text, width=35 if len(text) == 1 else (74 if text == "Siguiente" else 76), height=38, corner_radius=6, fg_color="transparent" if text == "Anterior" else GREEN if selected else SURFACE, hover_color=PALE_GREEN, border_width=0 if text == "Anterior" or selected else 1, border_color=BORDER, text_color=GREEN if text == "Anterior" or not selected else "white", font=("Source Sans 3 SemiBold", 16)).pack(side="left", padx=(0, 7))
 
         guide = ctk.CTkFrame(inner, fg_color=PALE_GREEN, corner_radius=10)
         guide.grid(row=6, column=0, sticky="ew", pady=(0, 8))
-        ctk.CTkLabel(guide, text="", text_color=GREEN, font=(ICON_FONT, 24)).pack(side="left", padx=(18, 14), pady=18)
-        
-        guide_text = ctk.CTkFrame(guide, fg_color="transparent")
-        guide_text.pack(side="left", fill="x", expand=True, pady=20)
-        self._label(guide_text, "Del cuento a la conversación", 17, INK, "bold").pack(anchor="w")
-        self._label(guide_text, "Cada libro tiene preguntas para imaginar, comprender y compartir ideas.", 12, GREEN, wraplength=560, justify="left").pack(anchor="w", pady=(4, 0))
-        self._label(guide, "Elige  →  Proyecta  →  Conversa", 12, INK, "bold").pack(side="right", padx=18)
+        ctk.CTkLabel(guide, text="", image=self._svg_image("messages-square", 30, GREEN), fg_color=PALE_GREEN).pack(side="left", padx=(22, 0), pady=22)
+        guide_text = ctk.CTkFrame(guide, fg_color=PALE_GREEN)
+        guide_text.pack(side="left", fill="x", expand=True, padx=20, pady=22)
+        ctk.CTkLabel(guide_text, text="Del cuento a la conversación", text_color=INK, font=("Source Sans 3 SemiBold", 21), anchor="w", justify="left").pack(anchor="w", fill="x")
+        self._label(guide_text, "Cada libro tiene preguntas para imaginar, comprender y compartir ideas.", 15, GREEN, anchor="w", justify="left").pack(anchor="w", fill="x", pady=(4, 0))
+        self._label(guide, "Elige → Proyecta → Conversa", 15, INK, "bold").pack(side="right", padx=(0, 22), pady=22)
 
     def _combo(self, parent: tk.Misc, text: str, width: int, column: int) -> None:
         combo = ctk.CTkComboBox(parent, values=[text], width=width, height=42, state="readonly", fg_color=SURFACE, border_color=BORDER, button_color=SURFACE, button_hover_color=PALE_GREEN, text_color=INK, dropdown_fg_color=SURFACE, dropdown_text_color=INK, font=("Source Sans 3", 15))
@@ -210,7 +221,7 @@ class HomeView(ctk.CTkFrame):
         self._images.append(ctk_image)
         ctk.CTkLabel(cover_area, text="", image=ctk_image).place(relx=0.5, rely=0.5, anchor="center")
         
-        title_label = self._label(card, title, 14, INK, wraplength=180, justify="left", anchor="w")
+        title_label = self._label(card, title, 19, INK, wraplength=180, justify="left", anchor="w")
         title_label.pack(anchor="w", fill="x", padx=10)
         details_label = self._label(card, details, 12, MUTED, wraplength=180, justify="left", anchor="w")
         details_label.pack(anchor="w", fill="x", padx=10, pady=(3, 8))
@@ -222,8 +233,7 @@ class HomeView(ctk.CTkFrame):
         tags.pack(fill="x", padx=10, pady=(0, 10))
         self._label(tags, grade, 11, GREEN, "bold", fg_color=PALE_GREEN, corner_radius=5, padx=8, pady=3).pack(side="left")
         self._label(tags, category, 11, GREEN, "bold", fg_color=PALE_TAN, corner_radius=5, padx=8, pady=3).pack(side="left", padx=5)
-        
-        ctk.CTkButton(card, text="  Ver libro y leer", height=32, corner_radius=6, fg_color=SURFACE, hover_color=PALE_GREEN, border_width=1, border_color=BORDER, text_color=GREEN, font=(ICON_FONT, 12, "bold")).pack(fill="x", padx=10, pady=(0, 10))
+        ctk.CTkButton(card, text="Ver libro y leer", image=self._svg_image("book-open-1", 17, GREEN, stroke_width=2.3), compound="left", height=35, corner_radius=6, fg_color=SURFACE, hover_color=PALE_GREEN, border_width=1, border_color=BORDER, text_color=GREEN, font=("Source Sans 3 SemiBold", 15)).pack(fill="x", padx=10, pady=(0, 10))
         return card
 
     def _layout_cards(self, _event: tk.Event | None = None) -> None:
