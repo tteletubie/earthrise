@@ -130,7 +130,7 @@ class HomeView(ctk.CTkFrame):
         self._label(top, "Biblioteca escolar  /  Espacio del maestro", 15, MUTED).pack(side="left", padx=36, pady=20)
         self._label(top, "Maestro", 13, GREEN, "bold", fg_color=PALE_TAN, corner_radius=5, padx=10, pady=4).pack(side="right", padx=36)
 
-        content = ctk.CTkScrollableFrame(workspace, fg_color=BACKGROUND, corner_radius=0, scrollbar_button_color="#d6d6ca", scrollbar_button_hover_color="#bfc9bd")
+        content = ctk.CTkFrame(workspace, fg_color=BACKGROUND, corner_radius=0)
         content.grid(row=1, column=0, sticky="nsew", padx=0, pady=0)
         content.grid_columnconfigure(0, weight=1)
         
