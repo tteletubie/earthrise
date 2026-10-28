@@ -53,8 +53,7 @@ class BookCard(Surface):
             pill.pack(side="left", padx=(0 if i == 0 else 7, 0))
             TextBlock(pill.body, text, 13, weight=600, color=C.green, bg=fill).pack()
 
-        RoundedButton(self.body, S.VIEW_BOOK, lambda: on_open(book), variant="outline",
-                      icon="book-open-1", icon_size=17, expand=True).pack(fill="x", pady=(11, 0))
+        RoundedButton(self.body, S.VIEW_BOOK, lambda: on_open(book), variant="outline", icon="book-open-1", icon_size=17, expand=True).pack(fill="x", pady=(11, 0))
 
 
 class CatalogView(tk.Frame):
@@ -117,18 +116,12 @@ class CatalogView(tk.Frame):
         TextBlock(row, S.PAGINATION_TEXT, 14, color=C.muted, bg=C.page).pack(side="left")
         buttons = tk.Frame(row, bg=C.page)
         buttons.pack(side="right")
-        RoundedButton(buttons, S.PREV_PAGE,
-                      lambda: self.controller.go_to_page(self.model.page - 1),
-                      variant="ghost").pack(side="left")
+        RoundedButton(buttons, S.PREV_PAGE, lambda: self.controller.go_to_page(self.model.page - 1), variant="ghost").pack(side="left")
         for number in range(1, self.model.total_pages + 1):
-            btn = RoundedButton(buttons, str(number),
-                                lambda n=number: self.controller.go_to_page(n),
-                                variant="outline")
+            btn = RoundedButton(buttons, str(number), lambda n=number: self.controller.go_to_page(n), variant="outline")
             btn.pack(side="left", padx=(7, 0))
             self._page_buttons[number] = btn
-        RoundedButton(buttons, S.NEXT_PAGE,
-                      lambda: self.controller.go_to_page(self.model.page + 1),
-                      variant="outline").pack(side="left", padx=(7, 0))
+        RoundedButton(buttons, S.NEXT_PAGE, lambda: self.controller.go_to_page(self.model.page + 1), variant="outline").pack(side="left", padx=(7, 0))
 
     def _build_banner(self, content):
         banner = Surface(content, fill=C.sage, radius=10, pad=(22, 22, 22, 22))
