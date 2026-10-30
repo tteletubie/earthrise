@@ -1,7 +1,8 @@
+import os
 from pathlib import Path
 
+os.environ.setdefault("QTWEBENGINE_CHROMIUM_FLAGS", "--disable-gpu --disable-gpu-compositing")
 import webview
-
 from controllers.app_controller import AppController
 
 
@@ -12,9 +13,10 @@ def main() -> None:
         "Basic MCP",
         url=home_path.as_uri(),
         js_api=controller,
-        width=480,
-        height=260,
-        min_size=(420, 180),
+        #width=480,
+        #height=260,
+        #min_size=(420, 180),
+        resizable=True,
     )
     webview.start()
 
