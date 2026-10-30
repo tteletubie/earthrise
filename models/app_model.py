@@ -3,4 +3,4 @@ class AppModel:
         self.message = "Ready to use."
 
     def test_interface(self) -> None:
-        self.message = "The Tkinter interface is working correctly."
+        self.message = "The web interface is working correctly."
