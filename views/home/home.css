@@ -238,7 +238,7 @@ html, body {
 }
 .barra-superior {
     align-self: stretch;
-    height: 74px;
+    min-height: 74px;
     border-bottom: 1px solid #dddcd1;
     box-sizing: border-box;
     overflow: hidden;
@@ -246,8 +246,33 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 36px;
+    flex-wrap: wrap;
+    padding: 12px 36px;
     gap: 20px;
+}
+.pruebas-de-tamano {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-left: auto;
+    color: #728078;
+    font-size: 12px;
+}
+.etiqueta-de-prueba {
+    margin-right: 2px;
+}
+.boton-de-tamano {
+    border: 1px solid #dddcd1;
+    border-radius: 5px;
+    background-color: #fffefa;
+    color: #285344;
+    cursor: pointer;
+    font: inherit;
+    padding: 5px 7px;
+}
+.boton-de-tamano:hover {
+    background-color: #e6ede3;
 }
 .descripcin5 {
     position: relative;
@@ -647,4 +672,102 @@ html, body {
     line-height: 135%;
     font-weight: 600;
     white-space: pre-wrap;
+}
+
+
+/* LESLY DISPLAY SIZE*/
+.biblioteca-del-maestro,
+.biblioteca-del-maestro * {
+    box-sizing: border-box;
+}
+
+/* Permite que los contenedores flex se reduzcan correctamente */
+.rea-de-trabajo,
+.catlogo-de-lecturas,
+.campo,
+.libro-disponible,
+.lectura-en-grupo {
+    min-width: 0;
+    min-height: 0;
+}
+
+/* Mantiene accesible el contenido si el área visible es menor */
+.catlogo-de-lecturas {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.catlogo-de-lecturas > * {
+    flex-shrink: 0;
+}
+
+/* Escritorio compacto: incluye 1366 × 768 */
+@media (max-width: 1366px), (max-height: 768px) {
+    .navegacin-lateral {
+        padding: 20px;
+    }
+
+    .catlogo-de-lecturas {
+        padding: 24px;
+        gap: 8px;
+    }
+
+    .bsqueda-y-filtros {
+        gap: 10px;
+    }
+
+    .campo2,
+    .campo3 {
+        width: 180px;
+    }
+
+    .libros-del-catlogo {
+        gap: 16px;
+    }
+
+    .libro-disponible {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .presentacin-de-portada {
+        height: 190px;
+        padding: 8px;
+    }
+
+    .portada-del-libro,
+    .portada-del-libro2,
+    .portada-del-libro3,
+    .portada-del-libro4 {
+        width: 120px;
+        height: 170px;
+    }
+
+    .ficha-breve {
+        gap: 2px;
+    }
+
+    .clasificacin {
+        gap: 6px;
+    }
+
+    .botn {
+        padding: 0 10px;
+        gap: 6px;
+    }
+
+    .pginas-del-catlogo {
+        gap: 6px;
+    }
+
+    .botn5,
+    .botn6,
+    .botn7 {
+        padding: 0 10px;
+    }
+
+    .gua-para-el-maestro {
+        padding: 12px 18px;
+        gap: 16px;
+    }
 }
