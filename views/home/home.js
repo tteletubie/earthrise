@@ -1,5 +1,28 @@
+import {
+    BookOpen,
+    ChevronDown,
+    Library,
+    LogOut,
+    MessagesSquare,
+    School,
+    Search,
+    createIcons,
+} from "../../node_modules/lucide/dist/esm/lucide.mjs";
+
 const testButton = document.querySelector("#test-btn");
 const message = document.querySelector("#message");
+
+createIcons({
+    icons: {
+        BookOpen,
+        ChevronDown,
+        Library,
+        LogOut,
+        MessagesSquare,
+        School,
+        Search,
+    },
+});
 
 function waitForApi() {
     if (window.pywebview?.api) {
