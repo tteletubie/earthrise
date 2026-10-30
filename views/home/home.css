@@ -1,57 +1,626 @@
-:root {
-  color: #1f2937;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    line-height: normal;
 }
 
-* {
-  box-sizing: border-box;
+.biblioteca-del-maestro {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: #285344;
+    font-family: "Source Sans 3";
 }
-
-body {
-  align-items: center;
-  background: #f3f4f6;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  padding: 24px;
+.navegacin-lateral {
+    align-self: stretch;
+    width: 224px;
+    background-color: #fffefa;
+    border-right: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 27px 20px 24px;
+    gap: 0px;
 }
-
-.card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
-  max-width: 420px;
-  padding: 28px;
-  text-align: center;
-  width: 100%;
+.accesos {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38px;
 }
-
-h1 {
-  font-size: 1.5rem;
-  margin: 0 0 8px;
+.identidad-escolar {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
 }
-
-.subtitle {
-  color: #6b7280;
-  margin: 0 0 24px;
+.smbolo {
+    height: 42px;
+    width: 39px;
+    border-radius: 6px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-#message {
-  margin: 0 0 20px;
+.book-open-icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
 }
-
-button {
-  background: #2563eb;
-  border: 0;
-  border-radius: 6px;
-  color: #ffffff;
-  cursor: pointer;
-  font: inherit;
-  padding: 9px 18px;
+.nombre {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
 }
-
-button:hover {
-  background: #1d4ed8;
+.subttulo {
+    position: relative;
+    line-height: 135%;
+}
+.descripcin {
+    position: relative;
+    font-size: 12px;
+    line-height: 135%;
+    color: #728078;
+}
+.men {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: #728078;
+}
+.etiqueta {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+.opcin-de-navegacin {
+    align-self: stretch;
+    height: 46px;
+    border-radius: 6px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0px 11px;
+    box-sizing: border-box;
+    gap: 10px;
+    font-size: 15px;
+    color: #263d34;
+}
+.library-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+.etiqueta2 {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+.sesin {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 14px;
+    color: #263d34;
+}
+.informacin-de-la-escuela {
+    align-self: stretch;
+    border-radius: 6px;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+    gap: 6px;
+}
+.school-icon {
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+.descripcin2 {
+    align-self: stretch;
+    position: relative;
+    font-size: 12px;
+    line-height: 135%;
+    color: #728078;
+}
+.usuario {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+.iniciales {
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    background-color: #eeeadb;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cuenta {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    font-size: 14px;
+}
+.etiqueta5 {
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+.cerrar-sesin {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #728078;
+}
+.log-out-icon {
+    height: 17px;
+    width: 17px;
+    position: relative;
+}
+.rea-de-trabajo {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 15px;
+    color: #728078;
+}
+.barra-superior {
+    align-self: stretch;
+    height: 74px;
+    border-bottom: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 36px;
+    gap: 20px;
+}
+.descripcin5 {
+    position: relative;
+    line-height: 135%;
+    white-space: pre-wrap;
+}
+.etiqueta6 {
+    border-radius: 5px;
+    background-color: #eeeadb;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #285344;
+}
+.catlogo-de-lecturas {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 20px;
+    font-size: 32px;
+    color: #263d34;
+}
+.encabezado {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.ttulo-y-descripcin {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+.ttulo {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+}
+.descripcin6 {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    line-height: 135%;
+    color: #728078;
+}
+.bsqueda-y-filtros {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+}
+.campo {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #728078;
+}
+.entrada {
+    align-self: stretch;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px 13px;
+    gap: 10px;
+    min-height: 42px;
+}
+.search-icon {
+    height: 18px;
+    width: 18px;
+    position: relative;
+}
+.descripcin7 {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+}
+.campo2 {
+    width: 208px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.chevron-down-icon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+}
+.campo3 {
+    width: 240px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.resumen-del-catlogo {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16px;
+}
+.cantidad-y-disponibilidad {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.descripcin10 {
+    position: relative;
+    font-size: 14px;
+    line-height: 135%;
+    color: #728078;
+}
+.orden-del-catlogo {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    color: #728078;
+}
+.libros-del-catlogo {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 18px;
+}
+.libro-disponible {
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px;
+    gap: 11px;
+}
+.presentacin-de-portada {
+    align-self: stretch;
+    height: 250px;
+    border-radius: 5px;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.portada-del-libro {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.datos-de-portada {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 12px 10px;
+    gap: 5px;
+}
+.etiqueta9 {
+    align-self: stretch;
+    position: relative;
+    line-height: 108%;
+}
+.descripcin12 {
+    align-self: stretch;
+    position: relative;
+    font-size: 11px;
+    line-height: 135%;
+    color: #285344;
+}
+.ilustracin-del-cuento {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.ficha-breve {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    font-size: 19px;
+}
+.descripcin13 {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    line-height: 135%;
+    color: #728078;
+}
+.clasificacin {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 13px;
+    color: #285344;
+}
+.etiqueta11 {
+    border-radius: 5px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+}
+.etiqueta13 {
+    border-radius: 5px;
+    background-color: #eeeadb;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+}
+.botn {
+    align-self: stretch;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    gap: 8px;
+    font-size: 15px;
+    color: #285344;
+}
+.portada-del-libro2 {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    background-color: #e5edef;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.portada-del-libro3 {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    background-color: #f5e8e0;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.portada-del-libro4 {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    background-color: #f5ebd4;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.paginacin {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 14px;
+    color: #728078;
+}
+.pginas-del-catlogo {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 15px;
+    color: #285344;
+}
+.botn5 {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    box-sizing: border-box;
+}
+.botn6 {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #285344;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.botn7 {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+}
+.gua-para-el-maestro {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 22px;
+    gap: 20px;
+    font-size: 21px;
+}
+.messages-square-icon {
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+.lectura-en-grupo {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.descripcin21 {
+    align-self: stretch;
+    position: relative;
+    font-size: 15px;
+    line-height: 135%;
+    color: #285344;
+}
+.etiqueta42 {
+    position: relative;
+    font-size: 15px;
+    line-height: 135%;
+    font-weight: 600;
+    white-space: pre-wrap;
 }
