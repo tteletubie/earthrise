@@ -1,0 +1,22 @@
+{
+  "name": "earthrise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tteletubie/earthrise.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tteletubie/earthrise/issues"
+  },
+  "homepage": "https://github.com/tteletubie/earthrise#readme",
+  "dependencies": {
+    "lucide": "^1.64.0"
+  }
+}
