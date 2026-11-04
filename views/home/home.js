@@ -62,3 +62,9 @@ if (testButton && message) {
         message.textContent = result.message;
     });
 }
+
+document.querySelectorAll(".libro-disponible .botn").forEach((bookButton) => {
+    bookButton.addEventListener("click", () => {
+        window.location.href = "../book_detail/book_detail.html";
+    });
+});
