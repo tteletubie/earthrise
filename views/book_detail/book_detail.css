@@ -22,7 +22,8 @@
     src: url("fonts/source-sans-3-700.ttf") format("truetype");
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     overflow: hidden;
@@ -681,4 +682,213 @@ html, body {
     font-size: 13px;
     line-height: 135%;
     color: #728078;
+}
+
+/* Laptop screens: 1025px a 1440px (also 1366×768) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* --- Navegación lateral más compacta --- */
+    .navegacin-lateral {
+        width: 200px;
+        padding: 20px 16px 18px;
+    }
+
+    .accesos {
+        gap: 24px;
+    }
+
+    .identidad-escolar {
+        gap: 9px;
+    }
+
+    .smbolo {
+        height: 38px;
+        width: 35px;
+    }
+
+    .subttulo {
+        font-size: 18px;
+    }
+
+    .opcin-de-navegacin {
+        height: 40px;
+    }
+
+    .informacin-de-la-escuela {
+        padding: 11px;
+    }
+
+    .sesin {
+        gap: 14px;
+    }
+
+    .rea-de-trabajo {
+        min-width: 0;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .barra-superior {
+        height: 58px;
+        padding: 0 28px;
+        font-size: 14px;
+    }
+
+    .ficha-de-lectura {
+        flex: none;
+        overflow: visible;
+        padding: 20px 28px 28px;
+        gap: 16px;
+    }
+
+    .presentacin-del-libro {
+        gap: 28px;
+        min-width: 0;
+    }
+
+    .portada-y-coleccin {
+        width: 230px;
+        gap: 10px;
+    }
+
+    .portada-del-libro {
+        width: 230px;
+        height: 324px;
+    }
+
+    .datos-de-portada {
+        padding: 14px 16px 8px;
+        gap: 4px;
+    }
+
+    .ttulo {
+        font-size: 24px;
+    }
+
+    .descripcin6 {
+        font-size: 12px;
+    }
+
+    .descripcin7 {
+        font-size: 12px;
+    }
+
+    .informacin-y-acciones {
+        min-width: 0;
+        gap: 14px;
+    }
+
+    .ttulo-y-autora {
+        gap: 8px;
+    }
+
+    .ttulo2 {
+        font-size: 34px;
+    }
+
+    .descripcin8 {
+        font-size: 15px;
+    }
+
+    .descripcin9 {
+        font-size: 16px;
+        line-height: 145%;
+    }
+
+    .datos-de-la-sesin {
+        padding: 14px;
+        gap: 14px;
+        font-size: 17px;
+    }
+
+    .dato-de-lectura {
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .descripcin10 {
+        font-size: 12px;
+    }
+
+    .acciones-de-lectura {
+        gap: 10px;
+    }
+
+    .botn,
+    .botn2 {
+        height: 38px;
+        padding: 0 14px;
+    }
+
+    .informacin-de-proyeccin {
+        font-size: 13px;
+    }
+
+    .preparacin-de-la-sesin {
+        gap: 16px;
+        min-width: 0;
+    }
+
+    .actividad-asociada,
+    .orientacin-para-el-maestro {
+        min-width: 0;
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .subttulo2 {
+        font-size: 21px;
+    }
+
+    .descripcin14 {
+        font-size: 14px;
+    }
+
+    .orientacin-para-el-maestro {
+        font-size: 19px;
+    }
+
+    .descripcin15 {
+        font-size: 15px;
+        line-height: 145%;
+    }
+
+    .descripcin16 {
+        font-size: 12px;
+    }
+
+    .botn3 {
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+/* Shorter screens (like 768px with navigation bar) */
+@media (max-height: 800px) and (min-width: 1025px) {
+    .barra-superior {
+        height: 52px;
+    }
+
+    .ficha-de-lectura {
+        padding-top: 16px;
+        gap: 14px;
+    }
+
+    .portada-y-coleccin,
+    .portada-del-libro {
+        width: 210px;
+    }
+
+    .portada-del-libro {
+        height: 296px;
+    }
+
+    .ttulo2 {
+        font-size: 30px;
+    }
+
+    .descripcin9 {
+        font-size: 15px;
+    }
 }

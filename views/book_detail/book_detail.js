@@ -55,3 +55,10 @@ document.querySelector("#opcinDeNavegacin")?.addEventListener("click", () => {
 document.querySelector("#volverAlCatlogo")?.addEventListener("click", () => {
     window.location.href = homeUrl;
 });
+
+
+document.querySelectorAll("#proyectarGrupo").forEach((bookButton) => {
+    bookButton.addEventListener("click", () => {
+        window.location.href = "../projection/index.html";
+    });
+});

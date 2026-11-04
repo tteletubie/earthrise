@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400;600&display=swap" />
+</head>
+<body>
+    <div class="lectura-en-proyeccin">
+        <div class="barra-de-lectura">
+            <div class="libro-en-proyeccin">
+                <i class="book-open-icon" data-lucide="book-open" aria-hidden="true"></i>
+
+                <div class="subttulo">La semilla de Luna</div>
+                <div class="etiqueta">
+                    <div class="subttulo">Modo proyección</div>
+                </div>
+            </div>
+            <div class="opciones-de-proyeccin">
+                <div class="botn">
+                    <div class="subttulo">A−</div>
+                </div>
+                <div class="botn">
+                    <div class="subttulo">A+</div>
+                </div>
+                <div class="botn3">
+                    <i class="minimize-2-icon" data-lucide="minimize-2" aria-hidden="true"></i>
+
+                    <div class="subttulo">Salir de proyección</div>
+                </div>
+            </div>
+        </div>
+        <div class="pgina-proyectada">
+            <div class="escena-final-del-cuento">
+                <div class="texto-de-la-lectura">
+                    <div class="etiqueta6">LA SEMILLA DE LUNA · ÚLTIMA PÁGINA</div>
+                    <div class="ttulo">Juntos, todo crece</div>
+                    <div class="ttulo2">Con el paso de los días, la semilla se convirtió en una planta llena de flores.
+                        Luna ya no regaba sola: sus amigos se turnaban para cuidarla.<br><br>—Cuando compartimos el
+                        cuidado, todos ayudamos a crecer —dijo Luna.<br><br>Desde entonces, el patio tuvo un pequeño
+                        jardín. Y el grupo aprendió que las cosas más bonitas necesitan tiempo, paciencia y muchas
+                        manos.</div>
+                    <div class="subttulo2">Fin</div>
+                </div>
+                <img class="ilustracin-de-cierre" alt="" src="images/book.jpg">
+
+            </div>
+        </div>
+        <div class="navegacin-de-lectura">
+            <div class="botn4">
+                <i class="minimize-2-icon" data-lucide="arrow-left" aria-hidden="true"></i>
+
+                <div class="subttulo">Página anterior</div>
+            </div>
+            <div class="progreso-de-lectura">
+                <div class="subttulo">Página 8 de 8</div>
+                <div class="indicador-de-pginas">
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                    <div class="pgina-leda">
+                    </div>
+                </div>
+                <div class="descripcin">Lectura terminada. ¡AhPora conversemos!</div>
+            </div>
+            <div class="botn5" id="botnContainer1">
+                <i class="minimize-2-icon" data-lucide="arrow-right" aria-hidden="true"></i>
+
+                <div class="subttulo" id="ir_actividad">Ir a la actividad</div>
+            </div>
+        </div>
+    </div>
+
+<script type="module" src="./index.js"></script>
+<script>
+    var botnContainer1 = document.getElementById("botnContainer1");
+    if (botnContainer1) {
+        botnContainer1.addEventListener("click", function (e) {
+            // Add your code here
+        });
+    }
+</script>
+</body>
+</html>
