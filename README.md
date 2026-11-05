@@ -1,12 +1,7 @@
-# Hello World Electron App
+# Earthrise [bank books 💰]
 
-A minimal desktop starter project built with Electron, HTML, CSS, and vanilla JavaScript.
-
-## Run locally
-
-```bash
-npm install
-npm start
-```
-
-The app opens a desktop window displaying “Hello World!”.
+## Usage
+Install with: `npm install`, and <br>
+Usage with: `npm start`
+<br>
+(**Requirements:** NodeJS (with npm))

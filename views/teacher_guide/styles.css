@@ -1,0 +1,460 @@
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/source-sans-3-400.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/source-sans-3-600.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/source-sans-3-700.ttf") format("truetype");
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.actividad-de-comprensin {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 21px;
+    color: #263d34;
+    font-family: 'Source Sans 3';
+}
+
+.barra-de-actividad {
+    align-self: stretch;
+    height: 80px;
+    border-bottom: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 32px;
+    gap: 20px;
+}
+
+.contexto-de-actividad {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.messages-square-icon {
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+
+.subttulo {
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.etiqueta {
+    border-radius: 5px;
+    background-color: #eeeadb;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #285344;
+}
+
+.acciones-de-actividad {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #285344;
+}
+
+.botn {
+    height: 42px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.arrow-left-icon {
+    height: 17px;
+    width: 17px;
+    position: relative;
+}
+
+.botn2 {
+    height: 42px;
+    border-radius: 6px;
+    background-color: #285344;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    gap: 8px;
+    color: #fff;
+}
+
+.actividad-y-gua-docente {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 28px 32px 24px;
+    gap: 24px;
+    font-size: 22px;
+}
+
+.preguntas-para-el-grupo {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.introduccin-a-la-actividad {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: #285344;
+}
+
+.etiqueta5 {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.ttulo {
+    align-self: stretch;
+    position: relative;
+    font-size: 36px;
+    line-height: 135%;
+    color: #263d34;
+}
+
+.descripcin {
+    align-self: stretch;
+    position: relative;
+    font-size: 18px;
+    line-height: 135%;
+    color: #728078;
+}
+
+.pregunta-de-comprensin {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 22px;
+    gap: 18px;
+}
+
+.nmero-de-pregunta {
+    height: 38px;
+    width: 38px;
+    border-radius: 6px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-de-pregunta {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #728078;
+}
+
+.subttulo3 {
+    align-self: stretch;
+    position: relative;
+    font-size: 25px;
+    line-height: 125%;
+    font-weight: 600;
+    color: #263d34;
+}
+
+.respuesta-mostrada {
+    align-self: stretch;
+    border-radius: 6px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 5px;
+    color: #285344;
+}
+
+.subttulo4 {
+    align-self: stretch;
+    position: relative;
+    font-size: 21px;
+    line-height: 135%;
+    color: #263d34;
+}
+
+.cierre-de-la-conversacin {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 0px;
+    gap: 10px;
+    font-size: 17px;
+    color: #285344;
+}
+
+.sprout-icon {
+    height: 22px;
+    width: 22px;
+    position: relative;
+}
+
+.descripcin2 {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+}
+
+.controles-del-maestro {
+    width: 320px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.respuestas-de-apoyo {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    gap: 20px;
+}
+
+.encabezado-docente {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 21px;
+}
+
+.sliders-horizontal-icon {
+    height: 21px;
+    width: 21px;
+    position: relative;
+}
+
+.subttulo9 {
+    flex: 1;
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.descripcin3 {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+    color: #728078;
+}
+
+.control-de-respuesta {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.estado-de-respuesta {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.botn3 {
+    align-self: stretch;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    gap: 8px;
+    color: #285344;
+}
+
+.estado-de-respuesta2 {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.botn6 {
+    align-self: stretch;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    box-sizing: border-box;
+    color: #285344;
+}
+
+.consejo-para-conversar {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #f5ebd4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.tiempo-de-actividad {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.clock-3-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.descripcin4 {
+    align-self: stretch;
+    position: relative;
+    font-size: 15px;
+    line-height: 150%;
+    color: #285344;
+}
+
+.botn7 {
+    align-self: stretch;
+    height: 42px;
+    border-radius: 6px;
+    background-color: #285344;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    gap: 8px;
+    color: #fff;
+}
+
+.informacin-de-sesin {
+    align-self: stretch;
+    height: 46px;
+    border-top: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 32px;
+    gap: 20px;
+    font-size: 13px;
+    color: #728078;
+}
+
+.descripcin5 {
+    position: relative;
+    line-height: 135%;
+}

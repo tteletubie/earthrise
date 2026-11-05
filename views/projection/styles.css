@@ -1,0 +1,423 @@
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/source-sans-3-400.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/source-sans-3-600.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/source-sans-3-700.ttf") format("truetype");
+}
+
+.lectura-en-proyeccin {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 23px;
+    color: #263d34;
+    font-family: 'Source Sans 3';
+}
+
+.barra-de-lectura {
+    align-self: stretch;
+    height: 80px;
+    border-bottom: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    gap: 20px;
+}
+
+.libro-en-proyeccin {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.book-open-icon {
+    height: 27px;
+    width: 27px;
+    position: relative;
+}
+
+.subttulo {
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.etiqueta {
+    border-radius: 5px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #285344;
+}
+
+.opciones-de-proyeccin {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #285344;
+}
+
+.botn {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+}
+
+.botn3 {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    gap: 8px;
+}
+
+.minimize-2-icon {
+    height: 17px;
+    width: 17px;
+    position: relative;
+}
+
+.pgina-proyectada {
+    align-self: stretch;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 40px 20px;
+    font-size: 14px;
+}
+
+.escena-final-del-cuento {
+    align-self: stretch;
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.texto-de-la-lectura {
+    align-self: stretch;
+    width: 818px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 36px 48px;
+    box-sizing: border-box;
+    gap: 22px;
+}
+
+.etiqueta6 {
+    align-self: stretch;
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+    color: #728078;
+}
+
+.ttulo {
+    align-self: stretch;
+    position: relative;
+    font-size: 42px;
+    line-height: 112%;
+    font-weight: 600;
+}
+
+.ttulo2 {
+    align-self: stretch;
+    position: relative;
+    font-size: 30px;
+    line-height: 148%;
+}
+
+.subttulo2 {
+    align-self: stretch;
+    position: relative;
+    font-size: 20px;
+    line-height: 135%;
+    font-weight: 600;
+    color: #285344;
+}
+
+.ilustracin-de-cierre {
+    align-self: stretch;
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.navegacin-de-lectura {
+    align-self: stretch;
+    height: 106px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px 12px;
+    box-sizing: border-box;
+    gap: 20px;
+    font-size: 15px;
+    color: #285344;
+}
+
+.botn4 {
+    height: 42px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    gap: 8px;
+}
+
+.progreso-de-lectura {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    font-size: 17px;
+    color: #263d34;
+}
+
+.indicador-de-pginas {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.pgina-leda {
+    height: 4px;
+    width: 26px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #285344;
+}
+
+.descripcin {
+    position: relative;
+    font-size: 13px;
+    line-height: 135%;
+    color: #728078;
+}
+
+.botn5 {
+    height: 42px;
+    border-radius: 6px;
+    background-color: #285344;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    gap: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Pantallas de laptop: 1025px a 1440px de ancho (incluye 1366×768) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* El original fija 1080px de alto: aquí se ajusta a la ventana */
+    .lectura-en-proyeccin {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    /* --- Barra superior --- */
+    .barra-de-lectura {
+        height: 58px;
+        padding: 0 28px;
+        gap: 14px;
+    }
+
+    .libro-en-proyeccin {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .book-open-icon {
+        height: 22px;
+        width: 22px;
+    }
+
+    .subttulo {
+        font-size: 18px;
+    }
+
+    .opciones-de-proyeccin {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .botn,
+    .botn3 {
+        height: 32px;
+        padding: 0 10px;
+    }
+
+    .minimize-2-icon {
+        height: 15px;
+        width: 15px;
+    }
+
+    /* --- Página proyectada --- */
+    .pgina-proyectada {
+        min-height: 0;
+        padding: 18px 28px 10px;
+    }
+
+    .escena-final-del-cuento {
+        min-height: 0;
+        min-width: 0;
+    }
+
+    /* --- Texto de la lectura (de 818px a un ancho proporcional) --- */
+    .texto-de-la-lectura {
+        width: 56%;
+        min-width: 0;
+        padding: 22px 32px;
+        gap: 14px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .etiqueta6 {
+        font-size: 13px;
+    }
+
+    .ttulo {
+        font-size: 32px;
+    }
+
+    .ttulo2 {
+        font-size: 22px;
+        line-height: 145%;
+    }
+
+    .subttulo2 {
+        font-size: 17px;
+    }
+
+    /* --- Ilustración: ocupa el espacio restante sin desbordar --- */
+    .ilustracin-de-cierre {
+        min-width: 0;
+        height: 100%;
+    }
+
+    /* --- Navegación de lectura (de 106px a 80px) --- */
+    .navegacin-de-lectura {
+        height: 80px;
+        padding: 0 28px 10px;
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .botn4,
+    .botn5 {
+        height: 38px;
+        padding: 0 14px;
+    }
+
+    .progreso-de-lectura {
+        gap: 7px;
+        font-size: 15px;
+    }
+
+    .pgina-leda {
+        width: 22px;
+    }
+
+    .descripcin {
+        font-size: 12px;
+    }
+}
+
+/* Alturas bajas (768px con barra del navegador): compacta un poco más */
+@media (max-height: 800px) and (min-width: 1025px) {
+    .barra-de-lectura {
+        height: 52px;
+    }
+
+    .pgina-proyectada {
+        padding-top: 14px;
+    }
+
+    .texto-de-la-lectura {
+        padding: 18px 28px;
+        gap: 12px;
+    }
+
+    .ttulo {
+        font-size: 28px;
+    }
+
+    .ttulo2 {
+        font-size: 20px;
+    }
+
+    .navegacin-de-lectura {
+        height: 70px;
+    }
+}
