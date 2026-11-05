@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
+
+Menu.setApplicationMenu(null);
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -8,13 +10,15 @@ const createWindow = () => {
     minWidth: 320,
     minHeight: 240,
     backgroundColor: '#f5f5f5',
+    autoHideMenuBar: true,
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false
     }
   });
 
-  window.loadFile(path.join(__dirname, 'views', 'home.html'));
+  window.setMenu(null);
+  window.loadFile(path.join(__dirname, 'views', 'home', 'home.html'));
 };
 
 app.whenReady().then(() => {

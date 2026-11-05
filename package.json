@@ -16,5 +16,8 @@
   },
   "allowScripts": {
     "electron@33.4.11": true
+  },
+  "dependencies": {
+    "lucide": "^1.68.0"
   }
 }
