@@ -14,7 +14,7 @@ const createWindow = () => {
     }
   });
 
-  window.loadFile(path.join(__dirname, 'index.html'));
+  window.loadFile(path.join(__dirname, 'views', 'home.html'));
 };
 
 app.whenReady().then(() => {

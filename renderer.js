@@ -1,1 +1,1 @@
-//document.querySelector('#message').textContent = 'Hello World!';
+// Renderer entry point is kept for future shared view initialization.
