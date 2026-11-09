@@ -18,6 +18,19 @@ const createWindow = () => {
   });
 
   window.setMenu(null);
+
+  // Load the fonts in each view (@font-face in CSS fails in Electron)
+  window.webContents.on('dom-ready', () => {
+    window.webContents.executeJavaScript(`
+      ['400', '600', '700'].forEach((weight) => {
+        new FontFace('Source Sans 3', 'url(fonts/source-sans-3-' + weight + '.ttf)', { weight })
+          .load()
+          .then((font) => document.fonts.add(font))
+          .catch((error) => console.error('Font error', weight, error));
+      });
+    `);
+  });
+
   window.loadFile(path.join(__dirname, 'views', 'home', 'home.html'));
 };
 
