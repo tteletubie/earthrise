@@ -25,6 +25,11 @@
 
 body {
     margin: 0;
+    font-family: "Source Sans 3";
+}
+
+body:has(.registro-del-maestro) {
+    overflow: hidden;
 }
 
 .biblioteca-del-maestro {
@@ -41,6 +46,204 @@ body {
     color: #285344;
     font-family: "Source Sans 3";
 }
+
+.registro-del-maestro {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgb(38 61 52 / 42%);
+    color: #263d34;
+    font-size: 14px;
+    text-align: left;
+}
+
+.ventana-de-datos-del-maestro {
+    width: min(600px, 100%);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border: 1px solid #dddcd1;
+    border-radius: 10px;
+    background-color: #fffefa;
+    box-shadow: 0 8px 32px rgb(38 61 51 / 8%);
+    color: #263d34;
+    padding: 32px 36px;
+}
+
+.ventana-de-datos-del-maestro .presentacin {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 0;
+    overflow: hidden;
+    color: #285344;
+    font-size: 13px;
+}
+
+.ventana-de-datos-del-maestro .espacio-del-maestro {
+    align-self: stretch;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.ventana-de-datos-del-maestro .completa-tu-perfil {
+    align-self: stretch;
+    color: #263d34;
+    font-size: 32px;
+    line-height: 135%;
+}
+
+.ventana-de-datos-del-maestro .ingresa-tus-datos {
+    align-self: stretch;
+    font-size: 16px;
+    line-height: 135%;
+    color: #728078;
+}
+
+.ventana-de-datos-del-maestro .nombre-del-maestro,
+.ventana-de-datos-del-maestro .grado {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.ventana-de-datos-del-maestro .nombre-del-maestro2,
+.ventana-de-datos-del-maestro .grado2 {
+    align-self: stretch;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.entrada-de-nombre-del-maestro,
+.entrada-de-grado {
+    font-family: "Source Sans 3";
+    width: 100%;
+    height: 46px;
+    border: 1px solid #dddcd1;
+    border-radius: 6px;
+    background-color: #fffefa;
+    color: #263d34;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.entrada-de-nombre-del-maestro {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 14px;
+}
+
+.escribe-tu-nombre {
+    width: 100%;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #728078;
+    font: inherit;
+    line-height: 135%;
+}
+
+.escribe-tu-nombre::placeholder {
+    color: #728078;
+}
+
+.entrada-de-grado {
+    padding: 0 14px;
+    color: #728078;
+}
+
+.acciones {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    overflow: hidden;
+    color: #285344;
+}
+
+.botones {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.cancelar,
+.guardar-y-continuar {
+    font-family: "Source Sans 3";
+    height: 44px;
+    flex: 1;
+    min-width: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+.cancelar {
+    background-color: #fffefa;
+    color: #285344;
+}
+
+.guardar-y-continuar {
+    border-color: #285344;
+    background-color: #285344;
+    color: #fffefa;
+}
+
+.cancelar:hover {
+    background-color: #e6ede3;
+}
+
+.guardar-y-continuar:hover {
+    background-color: #1f4336;
+}
+
+.todos-los-campos {
+    align-self: stretch;
+    color: #728078;
+    font-size: 13px;
+    line-height: 135%;
+}
+
+@media (max-width: 640px) {
+    .registro-del-maestro {
+        padding: 16px;
+    }
+
+    .ventana-de-datos-del-maestro {
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .ventana-de-datos-del-maestro .completa-tu-perfil {
+        font-size: 26px;
+    }
+
+    .ventana-de-datos-del-maestro .ingresa-tus-datos {
+        font-size: 14px;
+    }
+}
+
 .navegacin-lateral {
     align-self: stretch;
     width: 224px;
@@ -56,6 +259,7 @@ body {
     padding: 27px 20px 24px;
     gap: 0px;
 }
+
 .accesos {
     align-self: stretch;
     display: flex;
@@ -63,6 +267,7 @@ body {
     align-items: flex-start;
     gap: 38px;
 }
+
 .identidad-escolar {
     overflow: hidden;
     display: flex;
@@ -70,6 +275,7 @@ body {
     gap: 11px;
     flex-shrink: 0;
 }
+
 .smbolo {
     height: 42px;
     width: 39px;
@@ -82,11 +288,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .book-open-icon {
     width: 25px;
     height: 25px;
     position: relative;
 }
+
 .nombre {
     overflow: hidden;
     display: flex;
@@ -94,16 +302,19 @@ body {
     align-items: flex-start;
     gap: 1px;
 }
+
 .subttulo {
     position: relative;
     line-height: 135%;
 }
+
 .descripcin {
     position: relative;
     font-size: 12px;
     line-height: 135%;
     color: #728078;
 }
+
 .men {
     align-self: stretch;
     overflow: hidden;
@@ -115,12 +326,14 @@ body {
     font-size: 12px;
     color: #728078;
 }
+
 .etiqueta {
     align-self: stretch;
     position: relative;
     line-height: 135%;
     font-weight: 600;
 }
+
 .opcin-de-navegacin {
     align-self: stretch;
     height: 46px;
@@ -136,17 +349,20 @@ body {
     font-size: 15px;
     color: #263d34;
 }
+
 .library-icon {
     height: 20px;
     width: 20px;
     position: relative;
 }
+
 .etiqueta2 {
     flex: 1;
     position: relative;
     line-height: 135%;
     font-weight: 600;
 }
+
 .sesin {
     align-self: stretch;
     overflow: hidden;
@@ -157,6 +373,7 @@ body {
     font-size: 14px;
     color: #263d34;
 }
+
 .informacin-de-la-escuela {
     align-self: stretch;
     border-radius: 6px;
@@ -168,11 +385,13 @@ body {
     padding: 14px;
     gap: 6px;
 }
+
 .school-icon {
     width: 22px;
     height: 22px;
     position: relative;
 }
+
 .descripcin2 {
     align-self: stretch;
     position: relative;
@@ -180,6 +399,7 @@ body {
     line-height: 135%;
     color: #728078;
 }
+
 .usuario {
     overflow: hidden;
     display: flex;
@@ -187,6 +407,7 @@ body {
     gap: 10px;
     font-size: 13px;
 }
+
 .iniciales {
     height: 36px;
     width: 36px;
@@ -199,6 +420,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .cuenta {
     overflow: hidden;
     display: flex;
@@ -207,11 +429,13 @@ body {
     gap: 1px;
     font-size: 14px;
 }
+
 .etiqueta5 {
     position: relative;
     line-height: 135%;
     font-weight: 600;
 }
+
 .cerrar-sesin {
     overflow: hidden;
     display: flex;
@@ -219,11 +443,13 @@ body {
     gap: 9px;
     color: #728078;
 }
+
 .log-out-icon {
     height: 17px;
     width: 17px;
     position: relative;
 }
+
 .rea-de-trabajo {
     align-self: stretch;
     flex: 1;
@@ -234,6 +460,7 @@ body {
     font-size: 15px;
     color: #728078;
 }
+
 .barra-superior {
     align-self: stretch;
     min-height: 74px;
@@ -248,6 +475,7 @@ body {
     padding: 12px 36px;
     gap: 20px;
 }
+
 .pruebas-de-tamano {
     display: flex;
     align-items: center;
@@ -257,9 +485,11 @@ body {
     color: #728078;
     font-size: 12px;
 }
+
 .etiqueta-de-prueba {
     margin-right: 2px;
 }
+
 .boton-de-tamano {
     border: 1px solid #dddcd1;
     border-radius: 5px;
@@ -269,14 +499,17 @@ body {
     font: inherit;
     padding: 5px 7px;
 }
+
 .boton-de-tamano:hover {
     background-color: #e6ede3;
 }
+
 .descripcin5 {
     position: relative;
     line-height: 135%;
     white-space: pre-wrap;
 }
+
 .etiqueta6 {
     border-radius: 5px;
     background-color: #eeeadb;
@@ -287,6 +520,7 @@ body {
     font-size: 13px;
     color: #285344;
 }
+
 .catlogo-de-lecturas {
     align-self: stretch;
     flex: 1;
@@ -299,12 +533,14 @@ body {
     font-size: 32px;
     color: #263d34;
 }
+
 .encabezado {
     align-self: stretch;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
+
 .ttulo-y-descripcin {
     flex: 1;
     overflow: hidden;
@@ -313,11 +549,13 @@ body {
     align-items: flex-start;
     gap: 6px;
 }
+
 .ttulo {
     align-self: stretch;
     position: relative;
     line-height: 135%;
 }
+
 .descripcin6 {
     align-self: stretch;
     position: relative;
@@ -325,6 +563,7 @@ body {
     line-height: 135%;
     color: #728078;
 }
+
 .bsqueda-y-filtros {
     align-self: stretch;
     overflow: hidden;
@@ -333,6 +572,7 @@ body {
     gap: 14px;
     font-size: 15px;
 }
+
 .campo {
     flex: 1;
     overflow: hidden;
@@ -341,6 +581,7 @@ body {
     align-items: flex-start;
     color: #728078;
 }
+
 .entrada {
     align-self: stretch;
     border-radius: 6px;
@@ -354,16 +595,19 @@ body {
     gap: 10px;
     min-height: 42px;
 }
+
 .search-icon {
     height: 18px;
     width: 18px;
     position: relative;
 }
+
 .descripcin7 {
     flex: 1;
     position: relative;
     line-height: 135%;
 }
+
 .campo2 {
     width: 208px;
     overflow: hidden;
@@ -372,11 +616,13 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .chevron-down-icon {
     height: 16px;
     width: 16px;
     position: relative;
 }
+
 .campo3 {
     width: 240px;
     overflow: hidden;
@@ -385,6 +631,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .resumen-del-catlogo {
     align-self: stretch;
     overflow: hidden;
@@ -394,18 +641,21 @@ body {
     gap: 20px;
     font-size: 16px;
 }
+
 .cantidad-y-disponibilidad {
     overflow: hidden;
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .descripcin10 {
     position: relative;
     font-size: 14px;
     line-height: 135%;
     color: #728078;
 }
+
 .orden-del-catlogo {
     overflow: hidden;
     display: flex;
@@ -414,6 +664,7 @@ body {
     font-size: 14px;
     color: #728078;
 }
+
 .libros-del-catlogo {
     align-self: stretch;
     overflow: hidden;
@@ -422,6 +673,7 @@ body {
     gap: 20px;
     font-size: 18px;
 }
+
 .libro-disponible {
     flex: 1;
     border-radius: 10px;
@@ -434,6 +686,7 @@ body {
     padding: 14px;
     gap: 11px;
 }
+
 .presentacin-de-portada {
     align-self: stretch;
     height: 250px;
@@ -448,6 +701,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
 }
+
 .portada-del-libro {
     width: 160px;
     height: 230px;
@@ -459,6 +713,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .datos-de-portada {
     align-self: stretch;
     overflow: hidden;
@@ -468,11 +723,13 @@ body {
     padding: 14px 12px 10px;
     gap: 5px;
 }
+
 .etiqueta9 {
     align-self: stretch;
     position: relative;
     line-height: 108%;
 }
+
 .descripcin12 {
     align-self: stretch;
     position: relative;
@@ -480,6 +737,7 @@ body {
     line-height: 135%;
     color: #285344;
 }
+
 .ilustracin-del-cuento {
     align-self: stretch;
     flex: 1;
@@ -489,6 +747,7 @@ body {
     max-height: 100%;
     object-fit: cover;
 }
+
 .ficha-breve {
     align-self: stretch;
     overflow: hidden;
@@ -498,6 +757,7 @@ body {
     gap: 3px;
     font-size: 19px;
 }
+
 .descripcin13 {
     align-self: stretch;
     position: relative;
@@ -505,6 +765,7 @@ body {
     line-height: 135%;
     color: #728078;
 }
+
 .clasificacin {
     align-self: stretch;
     overflow: hidden;
@@ -514,6 +775,7 @@ body {
     font-size: 13px;
     color: #285344;
 }
+
 .etiqueta11 {
     border-radius: 5px;
     background-color: #e6ede3;
@@ -522,6 +784,7 @@ body {
     align-items: flex-start;
     padding: 4px 10px;
 }
+
 .etiqueta13 {
     border-radius: 5px;
     background-color: #eeeadb;
@@ -530,6 +793,7 @@ body {
     align-items: flex-start;
     padding: 4px 10px;
 }
+
 .botn {
     align-self: stretch;
     height: 34px;
@@ -547,6 +811,7 @@ body {
     font-size: 15px;
     color: #285344;
 }
+
 .portada-del-libro2 {
     width: 160px;
     height: 230px;
@@ -558,6 +823,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .portada-del-libro3 {
     width: 160px;
     height: 230px;
@@ -569,6 +835,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .portada-del-libro4 {
     width: 160px;
     height: 230px;
@@ -580,6 +847,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .paginacin {
     align-self: stretch;
     overflow: hidden;
@@ -590,6 +858,7 @@ body {
     font-size: 14px;
     color: #728078;
 }
+
 .pginas-del-catlogo {
     overflow: hidden;
     display: flex;
@@ -598,6 +867,7 @@ body {
     font-size: 15px;
     color: #285344;
 }
+
 .botn5 {
     height: 34px;
     border-radius: 6px;
@@ -609,6 +879,7 @@ body {
     padding: 0px 12px;
     box-sizing: border-box;
 }
+
 .botn6 {
     height: 34px;
     border-radius: 6px;
@@ -621,6 +892,7 @@ body {
     box-sizing: border-box;
     color: #fff;
 }
+
 .botn7 {
     height: 34px;
     border-radius: 6px;
@@ -633,6 +905,7 @@ body {
     justify-content: center;
     padding: 0px 12px;
 }
+
 .gua-para-el-maestro {
     align-self: stretch;
     border-radius: 10px;
@@ -644,11 +917,13 @@ body {
     gap: 20px;
     font-size: 21px;
 }
+
 .messages-square-icon {
     height: 30px;
     width: 30px;
     position: relative;
 }
+
 .lectura-en-grupo {
     flex: 1;
     overflow: hidden;
@@ -657,6 +932,7 @@ body {
     align-items: flex-start;
     gap: 4px;
 }
+
 .descripcin21 {
     align-self: stretch;
     position: relative;
@@ -664,6 +940,7 @@ body {
     line-height: 135%;
     color: #285344;
 }
+
 .etiqueta42 {
     position: relative;
     font-size: 15px;
@@ -694,12 +971,13 @@ body {
     overflow-x: hidden;
 }
 
-.catlogo-de-lecturas > * {
+.catlogo-de-lecturas>* {
     flex-shrink: 0;
 }
 
 /* Escritorio compacto: incluye 1366 × 768 */
-@media (max-width: 1366px), (max-height: 768px) {
+@media (max-width: 1366px),
+(max-height: 768px) {
     .navegacin-lateral {
         padding: 20px;
     }
