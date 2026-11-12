@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400;600;700&display=swap" />
+</head>
+<body>
+    <div class="administracin-de-libros">
+        <div class="navegacin-lateral">
+            <div class="accesos">
+                <div class="identidad-escolar">
+                    <div class="smbolo">
+                        <i class="book-open-icon" data-lucide="book-open" aria-hidden="true"></i>
+
+                    </div>
+                    <div class="nombre">
+                        <b class="subttulo">Entre páginas</b>
+                        <div class="descripcin">BANCO DE LIBROS ESCOLAR</div>
+                    </div>
+                </div>
+                <div class="men">
+                    <div class="etiqueta">ESPACIO ESCOLAR</div>
+                    <a class="opcin-de-navegacin" href="../home/home.html" aria-label="Volver al inicio del administrador">
+                        <i class="library-icon" data-lucide="library" aria-hidden="true"></i>
+
+                        <div class="descripcin2">Biblioteca</div>
+                    </a>
+                    <div class="opcin-de-navegacin2">
+                        <i class="library-icon" data-lucide="book-open" aria-hidden="true"></i>
+
+                        <div class="etiqueta2">Administrar libros</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sesin">
+                <div class="informacin-de-la-escuela">
+                    <i class="school-icon" data-lucide="school" aria-hidden="true"></i>
+
+                    <div class="etiqueta3">Primaria Los Encinos</div>
+                    <div class="descripcin3">Un libro, muchas formas de aprender.</div>
+                </div>
+                <div class="usuario">
+                    <div class="iniciales">
+                        <b class="subttulo">AL</b>
+                    </div>
+                    <div class="cuenta">
+                        <div class="etiqueta5">Ana López</div>
+                        <div class="descripcin">Administrador</div>
+                    </div>
+                </div>
+                <div class="cerrar-sesin">
+                    <i class="log-out-icon" data-lucide="log-out" aria-hidden="true"></i>
+
+                    <div class="subttulo">Cerrar sesión</div>
+                </div>
+            </div>
+        </div>
+        <div class="rea-de-trabajo">
+            <div class="barra-superior">
+                <div class="subttulo">Espacio de administración</div>
+                <div class="etiqueta6">
+                    <div class="etiqueta5">Administrador</div>
+                </div>
+            </div>
+            <div class="gestin-del-catlogo">
+                <div class="encabezado">
+                    <div class="ttulo-y-descripcin">
+                        <div class="ttulo">Administrar libros</div>
+                        <div class="descripcin7">Organiza las lecturas y sus actividades para toda la escuela.</div>
+                    </div>
+                    <div class="botn" id="agregar-libro" role="link" tabindex="0" aria-label="Agregar libro">
+                        <i class="log-out-icon" data-lucide="plus" aria-hidden="true"></i>
+
+                        <div class="etiqueta5">Agregar libro</div>
+                    </div>
+                </div>
+                <div class="resumen-de-publicacin">
+                    <div class="resumen-del-catlogo">
+                        <i class="book-open-icon" data-lucide="book-open" aria-hidden="true"></i>
+
+                        <div class="etiqueta5">12</div>
+                        <div class="descripcin8">Libros en el banco</div>
+                    </div>
+                    <div class="resumen-del-catlogo">
+                        <i class="book-open-icon" data-lucide="book-open-check" aria-hidden="true"></i>
+
+                        <div class="etiqueta5">10</div>
+                        <div class="descripcin8">Publicados para maestros</div>
+                    </div>
+                    <div class="resumen-del-catlogo">
+                        <i class="book-open-icon" data-lucide="file-pen-line" aria-hidden="true"></i>
+
+                        <div class="etiqueta5">2</div>
+                        <div class="descripcin8">Borradores en preparación</div>
+                    </div>
+                </div>
+                <div class="buscar-y-filtrar-libros">
+                    <div class="campo">
+                        <div class="entrada">
+                            <i class="search-icon" data-lucide="search" aria-hidden="true"></i>
+
+                            <div class="descripcin2">Buscar por título o autor</div>
+                        </div>
+                    </div>
+                    <div class="campo2">
+                        <div class="entrada">
+                            <div class="descripcin2">Todos los grados</div>
+                            <i class="chevron-down-icon" data-lucide="chevron-down" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="campo3">
+                        <div class="entrada">
+                            <div class="descripcin2">Todos los estados</div>
+                            <i class="chevron-down-icon" data-lucide="chevron-down" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tabla-de-libros">
+                    <div class="encabezados-de-tabla">
+                        <div class="etiqueta2">LIBRO Y AUTOR</div>
+                        <div class="etiqueta10">GRADO</div>
+                        <div class="etiqueta11">CATEGORÍA</div>
+                        <div class="etiqueta12">ACTIVIDAD</div>
+                        <div class="etiqueta13">ESTADO</div>
+                        <div class="etiqueta14">ACCIONES</div>
+                    </div>
+                    <div class="fila-de-libro">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada">
+                                <i class="sprout-icon" data-lucide="sprout" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">La semilla de Luna</div>
+                                <div class="descripcin14">Elena Ríos</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">2.º grado</div>
+                        <div class="descripcin16">Naturaleza</div>
+                        <div class="descripcin17">3 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta16">
+                                <div class="etiqueta5">Publicado</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="fila-de-libro2">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada">
+                                <i class="sprout-icon" data-lucide="droplet" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">El viaje de una gota</div>
+                                <div class="descripcin14">Pablo Montes</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">2.º grado</div>
+                        <div class="descripcin16">Ciencia</div>
+                        <div class="descripcin17">4 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta16">
+                                <div class="etiqueta5">Publicado</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="fila-de-libro2">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada">
+                                <i class="sprout-icon" data-lucide="heart" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">Un abrazo para erizo</div>
+                                <div class="descripcin14">Lucía Vidal</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">1.º grado</div>
+                        <div class="descripcin16">Convivencia</div>
+                        <div class="descripcin17">3 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta16">
+                                <div class="etiqueta5">Publicado</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="fila-de-libro2">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada">
+                                <i class="sprout-icon" data-lucide="moon" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">El cielo de Tomás</div>
+                                <div class="descripcin14">Inés Navarro</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">3.º grado</div>
+                        <div class="descripcin16">Imaginación</div>
+                        <div class="descripcin17">3 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta16">
+                                <div class="etiqueta5">Publicado</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="fila-de-libro2">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada5">
+                                <i class="sprout-icon" data-lucide="house" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">La casa de las palabras</div>
+                                <div class="descripcin14">Julia Prado</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">1.º grado</div>
+                        <div class="descripcin16">Lenguaje</div>
+                        <div class="descripcin17">2 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta36">
+                                <div class="etiqueta5">Borrador</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="fila-de-libro2">
+                        <div class="identificacin-del-libro">
+                            <div class="portada-abreviada">
+                                <i class="sprout-icon" data-lucide="handshake" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="ttulo-y-autor">
+                                <div class="etiqueta3">El puente de los amigos</div>
+                                <div class="descripcin14">Diego Robles</div>
+                            </div>
+                        </div>
+                        <div class="descripcin15">3.º grado</div>
+                        <div class="descripcin16">Convivencia</div>
+                        <div class="descripcin17">4 preguntas</div>
+                        <div class="estado-de-publicacin">
+                            <div class="etiqueta16">
+                                <div class="etiqueta5">Publicado</div>
+                            </div>
+                        </div>
+                        <div class="acciones-del-libro">
+                            <div class="botn2">
+                                <i class="log-out-icon" data-lucide="pencil" aria-hidden="true"></i>
+
+                                <div class="etiqueta5">Editar</div>
+                            </div>
+                            <div class="botn3">
+                                <div class="etiqueta5">Actividades</div>
+                            </div>
+                            <i class="trash-2-icon" data-lucide="trash-2" aria-hidden="true"></i>
+
+                        </div>
+                    </div>
+                    <div class="paginacin-de-la-tabla">
+                        <div class="subttulo">Mostrando 1–6 de 12 libros</div>
+                        <div class="pginas">
+                            <div class="botn3">
+                                <div class="etiqueta5">Anterior</div>
+                            </div>
+                            <div class="botn15">
+                                <div class="etiqueta5">1</div>
+                            </div>
+                            <div class="botn16">
+                                <div class="etiqueta5">2</div>
+                            </div>
+                            <div class="botn16">
+                                <div class="etiqueta5">Siguiente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="permisos-de-administracin">
+                    <i class="search-icon" data-lucide="search" aria-hidden="true"></i>
+
+                    <div class="descripcin2">Solo el administrador puede agregar, editar o eliminar libros y
+                        actividades. La papelera elimina el libro y su actividad.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../../node_modules/lucide/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons();
+
+        const addBookButton = document.querySelector('#agregar-libro');
+        const openActivityForm = () => {
+            window.location.href = '../activity_form/index.html';
+        };
+
+        addBookButton?.addEventListener('click', openActivityForm);
+        addBookButton?.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openActivityForm();
+            }
+        });
+    </script>
+
+</body>
+</html>

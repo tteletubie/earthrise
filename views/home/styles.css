@@ -436,6 +436,31 @@ body:has(.registro-del-maestro) {
     font-weight: 600;
 }
 
+.graduation-cap {
+    display: inline-flex;
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: -2px;
+}
+
+.icono-maestro {
+    display: inline-flex;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #eeeadb;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.icono-maestro .log-out-icon {
+    width: 13px;
+    height: 13px;
+}
+
 .cerrar-sesin {
     overflow: hidden;
     display: flex;
@@ -519,6 +544,12 @@ body:has(.registro-del-maestro) {
     padding: 4px 10px;
     font-size: 13px;
     color: #285344;
+}
+
+.maestro-con-verificacion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .catlogo-de-lecturas {
