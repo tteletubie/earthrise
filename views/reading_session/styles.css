@@ -455,3 +455,201 @@ body {
     position: relative;
     line-height: 135%;
 }
+
+/* Laptop screens: 1025px to 1440px wide (includes 1366×768) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* The original fixes 1080px of height: fit the window instead */
+    .actividad-de-comprensin {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    /* --- Top bar --- */
+    .barra-de-actividad {
+        height: 58px;
+        padding: 0 28px;
+        gap: 14px;
+    }
+
+    .contexto-de-actividad {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .messages-square-icon {
+        height: 22px;
+        width: 22px;
+    }
+
+    .subttulo {
+        font-size: 18px;
+    }
+
+    .acciones-de-actividad {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .botn,
+    .botn2 {
+        height: 36px;
+        padding: 0 14px;
+    }
+
+    /* --- Body: the bar and footer stay fixed, the content scrolls --- */
+    .actividad-y-gua-docente {
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 18px 28px 16px;
+        gap: 18px;
+    }
+
+    /* --- Questions column --- */
+    .preguntas-para-el-grupo {
+        min-width: 0;
+        overflow: visible;
+        gap: 14px;
+    }
+
+    .introduccin-a-la-actividad {
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .ttulo {
+        font-size: 28px;
+        line-height: 125%;
+    }
+
+    .descripcin {
+        font-size: 15px;
+    }
+
+    .pregunta-de-comprensin {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .nmero-de-pregunta {
+        height: 32px;
+        width: 32px;
+    }
+
+    .contenido-de-pregunta {
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .subttulo3 {
+        font-size: 20px;
+    }
+
+    .respuesta-mostrada {
+        padding: 12px;
+        gap: 4px;
+    }
+
+    .subttulo4 {
+        font-size: 17px;
+        line-height: 140%;
+    }
+
+    .cierre-de-la-conversacin {
+        gap: 8px;
+        font-size: 15px;
+        padding: 4px 4px 0;
+    }
+
+    .sprout-icon {
+        height: 19px;
+        width: 19px;
+    }
+
+    /* --- Teacher controls: 320px → 280px --- */
+    .controles-del-maestro {
+        width: 280px;
+        overflow: visible;
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .respuestas-de-apoyo {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .encabezado-docente {
+        gap: 8px;
+        font-size: 18px;
+    }
+
+    .sliders-horizontal-icon {
+        height: 19px;
+        width: 19px;
+    }
+
+    .control-de-respuesta {
+        gap: 6px;
+    }
+
+    .botn3,
+    .botn6 {
+        height: 32px;
+        padding: 0 10px;
+    }
+
+    .consejo-para-conversar {
+        padding: 16px;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .clock-3-icon {
+        height: 18px;
+        width: 18px;
+    }
+
+    .descripcin4 {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .botn7 {
+        height: 38px;
+        padding: 0 14px;
+    }
+
+    /* --- Session info footer --- */
+    .informacin-de-sesin {
+        height: 38px;
+        padding: 0 28px;
+        gap: 14px;
+        font-size: 12px;
+    }
+}
+
+/* Short heights (768px with the browser bar): compact a little more */
+@media (max-height: 800px) and (min-width: 1025px) {
+    .barra-de-actividad {
+        height: 52px;
+    }
+
+    .actividad-y-gua-docente {
+        padding-top: 14px;
+        gap: 16px;
+    }
+
+    .ttulo {
+        font-size: 26px;
+    }
+
+    .subttulo3 {
+        font-size: 19px;
+    }
+
+    .informacin-de-sesin {
+        height: 34px;
+    }
+}

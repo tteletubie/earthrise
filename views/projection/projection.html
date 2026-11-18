@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Entre páginas</title>
-	<link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entre páginas</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <div class="lectura-en-proyeccin">
         <div class="barra-de-lectura">
@@ -24,7 +26,7 @@
                 <div class="botn">
                     <div class="subttulo">A+</div>
                 </div>
-                <div class="botn3">
+                <div class="botn3" id="salirProyeccion">
                     <i class="minimize-2-icon" data-lucide="minimize-2" aria-hidden="true"></i>
 
                     <div class="subttulo">Salir de proyección</div>
@@ -73,9 +75,9 @@
                     <div class="pgina-leda">
                     </div>
                 </div>
-                <div class="descripcin">Lectura terminada. ¡AhPora conversemos!</div>
+                <div class="descripcin">Lectura terminada. ¡Ahora conversemos!</div>
             </div>
-            <div class="botn5" id="botnContainer1">
+            <div class="botn5" id="readingSession">
                 <i class="minimize-2-icon" data-lucide="arrow-right" aria-hidden="true"></i>
 
                 <div class="subttulo" id="ir_actividad">Ir a la actividad</div>
@@ -83,7 +85,8 @@
         </div>
     </div>
 
-<script src="../../node_modules/lucide/dist/umd/lucide.min.js"></script>
-<script src="../../controllers/projectionController.js"></script>
+    <script src="../../node_modules/lucide/dist/umd/lucide.min.js"></script>
+    <script src="../../controllers/projectionController.js"></script>
 </body>
+
 </html>

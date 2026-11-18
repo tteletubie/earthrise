@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400;600;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400;600;700&display=swap" />
 </head>
+
 <body>
     <div class="administracin-de-libros">
         <div class="navegacin-lateral">
@@ -22,7 +25,8 @@
                 </div>
                 <div class="men">
                     <div class="etiqueta">ESPACIO ESCOLAR</div>
-                    <a class="opcin-de-navegacin" href="../home/home.html" aria-label="Volver al inicio del administrador">
+                    <a class="opcin-de-navegacin" href="../home/home.html"
+                        aria-label="Volver al inicio del administrador">
                         <i class="library-icon" data-lucide="library" aria-hidden="true"></i>
 
                         <div class="descripcin2">Biblioteca</div>
@@ -70,7 +74,7 @@
                         <div class="ttulo">Administrar libros</div>
                         <div class="descripcin7">Organiza las lecturas y sus actividades para toda la escuela.</div>
                     </div>
-                    <div class="botn" id="agregar-libro" role="link" tabindex="0" aria-label="Agregar libro">
+                    <div class="botn" id="agregarLibro" role="link" tabindex="0" aria-label="Agregar libro">
                         <i class="log-out-icon" data-lucide="plus" aria-hidden="true"></i>
 
                         <div class="etiqueta5">Agregar libro</div>
@@ -353,9 +357,9 @@
     <script>
         lucide.createIcons();
 
-        const addBookButton = document.querySelector('#agregar-libro');
+        const addBookButton = document.querySelector('#agregarLibro');
         const openActivityForm = () => {
-            window.location.href = '../activity_form/index.html';
+            window.location.href = '../activity_form/activity_form.html';
         };
 
         addBookButton?.addEventListener('click', openActivityForm);
@@ -368,4 +372,5 @@
     </script>
 
 </body>
+
 </html>

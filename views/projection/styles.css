@@ -280,3 +280,149 @@ body {
     cursor: pointer;
     color: #fff;
 }
+
+/* Laptop screens: 1025px to 1440px wide (includes 1366×768) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* The original fixes 60rem (960px) of height: fit the window instead */
+    .lectura-en-proyeccin {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    /* --- Top bar --- */
+    .barra-de-lectura {
+        height: 3.625rem;
+        padding: 0 1.75rem;
+        gap: 0.875rem;
+    }
+
+    .libro-en-proyeccin {
+        gap: 0.625rem;
+        min-width: 0;
+    }
+
+    .book-open-icon {
+        height: 1.375rem;
+        width: 1.375rem;
+    }
+
+    .subttulo {
+        font-size: 1.125rem;
+    }
+
+    .opciones-de-proyeccin {
+        gap: 0.625rem;
+        font-size: 0.875rem;
+    }
+
+    .botn,
+    .botn3 {
+        height: 2rem;
+        padding: 0 0.625rem;
+    }
+
+    .minimize-2-icon {
+        height: 0.938rem;
+        width: 0.938rem;
+    }
+
+    /* --- Projected page --- */
+    .pgina-proyectada {
+        min-height: 0;
+        padding: 1.125rem 1.75rem 0.625rem;
+    }
+
+    .escena-final-del-cuento {
+        min-height: 0;
+        min-width: 0;
+    }
+
+    /* --- Reading text (from 51.125rem fixed to a proportional width) --- */
+    .texto-de-la-lectura {
+        width: 56%;
+        min-width: 0;
+        padding: 1.375rem 2rem;
+        gap: 0.875rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .etiqueta6 {
+        font-size: 0.813rem;
+    }
+
+    .ttulo {
+        font-size: 2rem;
+    }
+
+    .ttulo2 {
+        font-size: 1.375rem;
+        line-height: 145%;
+    }
+
+    .subttulo2 {
+        font-size: 1.063rem;
+    }
+
+    /* --- Illustration: fills the remaining space without overflowing --- */
+    .ilustracin-de-cierre {
+        min-width: 0;
+        height: 100%;
+    }
+
+    /* --- Reading navigation (from 6.625rem to 5rem) --- */
+    .navegacin-de-lectura {
+        height: 5rem;
+        padding: 0 1.75rem 0.625rem;
+        gap: 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    .botn4,
+    .botn5 {
+        height: 2.375rem;
+        padding: 0 0.875rem;
+    }
+
+    .progreso-de-lectura {
+        gap: 0.438rem;
+        font-size: 0.938rem;
+    }
+
+    .pgina-leda {
+        width: 1.375rem;
+    }
+
+    .descripcin {
+        font-size: 0.75rem;
+    }
+}
+
+/* Short heights (768px with the browser bar): compact a little more */
+@media (max-height: 800px) and (min-width: 1025px) {
+    .barra-de-lectura {
+        height: 3.25rem;
+    }
+
+    .pgina-proyectada {
+        padding-top: 0.875rem;
+    }
+
+    .texto-de-la-lectura {
+        padding: 1.125rem 1.75rem;
+        gap: 0.75rem;
+    }
+
+    .ttulo {
+        font-size: 1.75rem;
+    }
+
+    .ttulo2 {
+        font-size: 1.25rem;
+    }
+
+    .navegacin-de-lectura {
+        height: 4.375rem;
+    }
+}

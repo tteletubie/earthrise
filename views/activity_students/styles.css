@@ -1,0 +1,542 @@
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/source-sans-3-400.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 600;
+    src: url("fonts/source-sans-3-600.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Source Sans 3";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/source-sans-3-700.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans 3";
+    font-size: 66.67%;
+}
+
+
+.actividad-en-proyeccin {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    background-color: #f6f4ed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 23px;
+    color: #285344;
+    font-family: 'Source Sans 3';
+}
+
+.barra-de-proyeccin {
+    align-self: stretch;
+    height: 80px;
+    border-bottom: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    gap: 20px;
+    color: #263d34;
+}
+
+.libro-y-modo-de-proyeccin {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.book-open-icon {
+    height: 27px;
+    width: 27px;
+    position: relative;
+}
+
+.subttulo {
+    position: relative;
+    line-height: 135%;
+    font-weight: 600;
+}
+
+.etiqueta {
+    border-radius: 5px;
+    background-color: #e6ede3;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #285344;
+}
+
+.opciones-de-proyeccin {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: #285344;
+}
+
+.botn {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+}
+
+.botn3 {
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    gap: 8px;
+}
+
+.minimize-2-icon {
+    height: 17px;
+    width: 17px;
+    position: relative;
+}
+
+.pregunta-para-el-grupo {
+    align-self: stretch;
+    height: 866px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 80px 24px;
+    box-sizing: border-box;
+    gap: 28px;
+    font-size: 16px;
+}
+
+.ttulo-de-la-actividad {
+    width: 1760px;
+    height: 92px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.contexto-de-la {
+    position: relative;
+    line-height: 125%;
+    font-weight: 600;
+}
+
+.ttulo {
+    position: relative;
+    font-size: 36px;
+    line-height: 125%;
+    color: #263d34;
+}
+
+.pregunta-1-recordar {
+    width: 1760px;
+    height: 682px;
+    border-radius: 8px;
+    background-color: #fffefb;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 96px 48px;
+    gap: 32px;
+    font-size: 19px;
+}
+
+.progreso-y-habilidad {
+    height: 44px;
+    border-radius: 4px;
+    background-color: #e6ede2;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.consigna-de-conversacin {
+    width: 1568px;
+    height: 340px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    font-size: 64px;
+    color: #263d34;
+}
+
+.pregunta-para-proyectar {
+    width: 1380px;
+    position: relative;
+    line-height: 125%;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.invitacin-a-participar {
+    width: 1380px;
+    position: relative;
+    font-size: 30px;
+    line-height: 125%;
+    color: #52685c;
+    display: inline-block;
+}
+
+.mostrar-respuesta-de-apoyo {
+    width: 280px;
+    height: 52px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 12px;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.respuesta-de-apoyo-oculta-al {
+    width: 1440px;
+    background-color: #e6ede2;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 32px 0px;
+    box-sizing: border-box;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.navegacin-de-actividad {
+    align-self: stretch;
+    height: 134px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px 22px;
+    box-sizing: border-box;
+    gap: 20px;
+    font-size: 15px;
+}
+
+.volver-al-libro {
+    height: 48px;
+    width: 196px;
+    border-radius: 6px;
+    background-color: #fffefa;
+    border: 1px solid #dddcd1;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    gap: 8px;
+}
+
+.progreso-de-la-actividad {
+    height: 76px;
+    width: 720px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: #263d34;
+}
+
+.indicador-de-preguntas {
+    height: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pregunta-1 {
+    height: 5px;
+    width: 54px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #285344;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.pregunta-2 {
+    height: 5px;
+    width: 54px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #dddcd1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.recordatorio-para-el {
+    position: relative;
+    line-height: 125%;
+    color: #52685c;
+}
+
+.siguiente-pregunta {
+    height: 48px;
+    width: 210px;
+    border-radius: 6px;
+    background-color: #285344;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    box-sizing: border-box;
+    gap: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Laptop screens: 1025px to 1440px wide (includes 1366×768) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* The original fixes 1080px of height: fit the window instead */
+    .actividad-en-proyeccin {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    /* --- Top bar --- */
+    .barra-de-proyeccin {
+        height: 58px;
+        padding: 0 28px;
+        gap: 14px;
+    }
+
+    .libro-y-modo-de-proyeccin {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .book-open-icon {
+        height: 22px;
+        width: 22px;
+    }
+
+    .subttulo {
+        font-size: 18px;
+    }
+
+    .opciones-de-proyeccin {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .botn,
+    .botn3 {
+        height: 32px;
+        padding: 0 10px;
+    }
+
+    .minimize-2-icon {
+        height: 15px;
+        width: 15px;
+    }
+
+    /* --- Question area: from fixed 866px to the remaining space --- */
+    .pregunta-para-el-grupo {
+        height: auto;
+        flex: 1;
+        min-height: 0;
+        min-width: 0;
+        padding: 22px 56px 14px;
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    .ttulo-de-la-actividad {
+        width: 100%;
+        height: auto;
+        gap: 4px;
+    }
+
+    .ttulo {
+        font-size: 28px;
+    }
+
+    /* --- Question card: from 1760px × 682px fixed to fluid --- */
+    .pregunta-1-recordar {
+        width: 100%;
+        height: auto;
+        flex: 1;
+        min-height: 0;
+        padding: 28px 56px 24px;
+        gap: 18px;
+        font-size: 17px;
+    }
+
+    .progreso-y-habilidad {
+        height: 36px;
+    }
+
+    /* --- Discussion prompt: 1568px / 1380px → percentages --- */
+    .consigna-de-conversacin {
+        width: 100%;
+        height: auto;
+        flex: 1;
+        min-height: 0;
+        gap: 16px;
+        font-size: 44px;
+    }
+
+    .pregunta-para-proyectar {
+        width: 90%;
+        line-height: 120%;
+    }
+
+    .invitacin-a-participar {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .mostrar-respuesta-de-apoyo {
+        width: 240px;
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .respuesta-de-apoyo-oculta-al {
+        width: 90%;
+        padding: 16px 24px 0;
+        font-size: 16px;
+    }
+
+    /* --- Activity navigation (from 134px to 92px) --- */
+    .navegacin-de-actividad {
+        height: 92px;
+        padding: 0 56px 14px;
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .volver-al-libro {
+        height: 42px;
+        width: 170px;
+        padding: 0 14px;
+    }
+
+    .siguiente-pregunta {
+        height: 42px;
+        width: 185px;
+        padding: 0 14px;
+    }
+
+    .progreso-de-la-actividad {
+        width: 480px;
+        max-width: 100%;
+        height: auto;
+        gap: 8px;
+        font-size: 17px;
+    }
+
+    .pregunta-1,
+    .pregunta-2 {
+        width: 44px;
+    }
+}
+
+/* Short heights (768px with the browser bar): compact a little more */
+@media (max-height: 800px) and (min-width: 1025px) {
+    .barra-de-proyeccin {
+        height: 52px;
+    }
+
+    .pregunta-para-el-grupo {
+        padding-top: 16px;
+        gap: 12px;
+    }
+
+    .ttulo {
+        font-size: 26px;
+    }
+
+    .pregunta-1-recordar {
+        padding: 22px 48px 18px;
+        gap: 14px;
+    }
+
+    .consigna-de-conversacin {
+        font-size: 40px;
+    }
+
+    .invitacin-a-participar {
+        font-size: 20px;
+    }
+
+    .navegacin-de-actividad {
+        height: 80px;
+    }
+}
+
+.volver-al-libro .subttulo,
+.siguiente-pregunta .subttulo {
+    font-size: 15px;
+}

@@ -13,3 +13,10 @@ if (projectForGroup) {
     window.location.href = '../projection/projection.html';
   });
 }
+
+const activityForGroup = document.querySelector('#activitySession');
+if (activityForGroup) {
+  activityForGroup.addEventListener('click', () => {
+    window.location.href = '../activity_students/activity_students.html';
+  });
+}

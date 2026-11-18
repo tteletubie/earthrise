@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
 
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400;600;700&display=swap" />
 </head>
@@ -26,7 +26,8 @@
                 </div>
                 <div class="men">
                     <div class="etiqueta">ESPACIO ESCOLAR</div>
-                    <a class="opcin-de-navegacin" href="../home/home.html" aria-label="Volver al inicio del administrador">
+                    <a class="opcin-de-navegacin" href="../home/home.html"
+                        aria-label="Volver al inicio del administrador">
                         <i class="library-icon" data-lucide="library" aria-hidden="true"></i>
 
                         <div class="descripcin2">Biblioteca</div>
@@ -279,7 +280,8 @@
                 <div class="guardar-edicin">
                     <div class="subttulo">* Campos obligatorios · Los cambios se aplican al guardar.</div>
                     <div class="acciones-del-formulario">
-                        <div class="botn4">
+                        <div class="botn4" id="cancelar-actividad" role="link" tabindex="0"
+                            aria-label="Cancelar y volver a administrar libros">
                             <div class="etiqueta5">Cancelar</div>
                         </div>
                         <div class="botn5">
@@ -297,6 +299,19 @@
     <script src="../../../node_modules/lucide/dist/umd/lucide.min.js"></script>
     <script>
         lucide.createIcons();
+
+        const cancelActivityButton = document.querySelector('#cancelar-actividad');
+        const returnToBooksAdmin = () => {
+            window.location.href = '../books_admin/books_admin.html';
+        };
+
+        cancelActivityButton?.addEventListener('click', returnToBooksAdmin);
+        cancelActivityButton?.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                returnToBooksAdmin();
+            }
+        });
     </script>
 
 </body>
