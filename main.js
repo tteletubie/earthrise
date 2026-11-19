@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('node:path');
+const registerUserController = require('./controllers/userController');
 
 Menu.setApplicationMenu(null);
 
@@ -13,7 +14,8 @@ const createWindow = () => {
     autoHideMenuBar: true,
     webPreferences: {
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'preload.js'),
     }
   });
 
@@ -32,9 +34,12 @@ const createWindow = () => {
   });
 
   window.loadFile(path.join(__dirname, 'views', 'home', 'home.html'));
+
+  window.webContents.openDevTools();
 };
 
 app.whenReady().then(() => {
+  registerUserController();
   createWindow();
 
   app.on('activate', () => {

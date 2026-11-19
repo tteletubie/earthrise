@@ -12,12 +12,23 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@electron/rebuild": "^4.2.1",
     "electron": "^33.4.11"
   },
   "allowScripts": {
     "electron@33.4.11": true
   },
   "dependencies": {
+    "better-sqlite3": "^11.10.0",
     "lucide": "^1.68.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tteletubie/earthrise.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/tteletubie/earthrise/issues"
+  },
+  "homepage": "https://github.com/tteletubie/earthrise#readme"
 }
