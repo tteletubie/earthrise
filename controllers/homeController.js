@@ -42,7 +42,36 @@ const closeProfileDialog = () => {
 };
 
 profileDialog?.querySelector('.cancelar')?.addEventListener('click', closeProfileDialog);
-profileDialog?.querySelector('.guardar-y-continuar')?.addEventListener('click', closeProfileDialog);
+const saveProfileButton = profileDialog?.querySelector('.guardar-y-continuar');
+saveProfileButton?.addEventListener('click', async () => {
+  const nombre = profileDialog.querySelector('[name="nombre"]')?.value.trim();
+  const apellido = profileDialog.querySelector('[name="apellido"]')?.value.trim();
+  const id_grado = Number(profileDialog.querySelector('[name="grado"]')?.value);
+
+  if (!nombre || !apellido || !id_grado) {
+    return;
+  }
+
+  if (!window.api?.usuario) {
+    console.error('La API de usuario no está disponible.');
+    return;
+  }
+
+  saveProfileButton.disabled = true;
+  const result = await window.api.usuario.create({
+    nombre,
+    apellido_paterno: apellido,
+    id_grado
+  });
+  saveProfileButton.disabled = false;
+
+  if (!result.success) {
+    console.error(result.error);
+    return;
+  }
+
+  closeProfileDialog();
+});
 profileDialog?.addEventListener('click', (event) => {
   if (event.target === profileDialog) {
     closeProfileDialog();
@@ -53,3 +82,6 @@ document.addEventListener('keydown', (event) => {
     closeProfileDialog();
   }
 });
+
+
+
