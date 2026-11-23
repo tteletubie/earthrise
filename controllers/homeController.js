@@ -76,6 +76,7 @@
             }
 
             closeProfileDialog(app);
+            navigate("#home");
         });
 
         const escapeHandler = (event) => {

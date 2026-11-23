@@ -32,11 +32,22 @@
                 </div>
                 <div class="usuario">
                     <div class="iniciales">
-                        <b class="subttulo">MG</b>
+                        <b class="subttulo">
+                            {% if usuario %}
+                                {{ usuario.nombre | first }}{{ usuario.apellido_paterno | first }}
+                            {% else %}
+                                --
+                            {% endif %}
+                        </b>
                     </div>
                     <div class="cuenta">
-                        <div class="etiqueta5">María García</div>
-                        <div class="descripcin">Maestro · 2.º A</div>
+                        {% if usuario %}
+                            <div class="etiqueta5">{{ usuario.nombre }} {{ usuario.apellido_paterno }}</div>
+                            <div class="descripcin">Maestro · {{ usuario.grado_nombre }}</div>
+                        {% else %}
+                            <div class="etiqueta5">Usuario no registrado</div>
+                            <div class="descripcin">Completa tu perfil</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="cerrar-sesin">
@@ -65,7 +76,12 @@
                 <div class="encabezado">
                     <div class="ttulo-y-descripcin">
                         <div class="ttulo">Una historia para cada día</div>
-                        <div class="descripcin6">Hola, María. Encuentra la próxima lectura para compartir con tu grupo.
+                        <div class="descripcin6">
+                            {% if usuario %}
+                                Hola, {{ usuario.nombre }}. Encuentra la próxima lectura para compartir con tu grupo.
+                            {% else %}
+                                Hola. Encuentra la próxima lectura para compartir con tu grupo.
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -255,6 +271,7 @@
         </div>
     </div>
 
+    {% if not usuario %}
     <div class="registro-del-maestro" role="dialog" aria-modal="true" aria-labelledby="titulo-registro-maestro">
         <div class="ventana-de-datos-del-maestro">
             <div class="presentacin">
@@ -294,5 +311,6 @@
                 <div class="todos-los-campos">* Todos los campos son obligatorios.</div>
             </div>
         </div>
+        {% endif %}
     </div>
 {% endblock %}
