@@ -4,7 +4,9 @@
   "description": "A basic Electron desktop application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "electronmon .",
+    "postinstall": "electron-rebuild -f -w better-sqlite3"
   },
   "keywords": [
     "electron",
@@ -13,14 +15,23 @@
   "license": "MIT",
   "devDependencies": {
     "@electron/rebuild": "^4.2.1",
-    "electron": "^33.4.11"
+    "electron": "^33.4.11",
+    "electronmon": "^2.0.4"
   },
   "allowScripts": {
-    "electron@33.4.11": true
+    "electron@33.4.11": true,
+    "better-sqlite3@11.10.0": true
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0",
     "lucide": "^1.68.0"
+  },
+  "electronmon": {
+    "patterns": [
+      "!*.db",
+      "!*.db-wal",
+      "!*.db-shm"
+    ]
   },
   "repository": {
     "type": "git",
