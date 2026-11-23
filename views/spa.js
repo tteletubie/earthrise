@@ -1,7 +1,7 @@
 (function () {
   const app = document.getElementById('app');
   const routes = {
-    '#home': 'pages/home.njk'
+    '#home': 'home/home.njk'
   };
 
   function showLoading() {
@@ -10,6 +10,13 @@
 
   function showError(message) {
     app.textContent = `Error: ${message}`;
+  }
+
+  function navigate(hash) {
+    if (window.location.hash !== hash) {
+      window.history.pushState(null, '', hash);
+    }
+    renderCurrentRoute();
   }
 
   async function renderCurrentRoute() {
@@ -34,6 +41,12 @@
         return;
       }
       app.innerHTML = result.html;
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+      if (templateName === 'home/home.njk') {
+        window.HomeController?.initialize(app, navigate);
+      }
     } catch (error) {
       showError(error && error.message ? error.message : 'The view could not be rendered.');
     }

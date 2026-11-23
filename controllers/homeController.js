@@ -1,87 +1,94 @@
-lucide.createIcons();
+(function () {
+    function closeProfileDialog(app) {
+        const profileDialog = app.querySelector(".registro-del-maestro");
+        profileDialog?.remove();
+        document.body.style.overflow = "";
+    }
 
-const adminBooksLink = document.querySelector('.icono-maestro:not(.cap-home)');
-const openBooksAdmin = () => {
-  const isAdminHome = window.location.pathname.includes('/views/admin/home/');
-  window.location.href = isAdminHome
-    ? '../books_admin/books_admin.html'
-    : '../admin/home/home.html';
-};
+    function bindRoute(app, navigate, selector, route) {
+        app.querySelectorAll(selector).forEach((element) => {
+            const activate = () => navigate(route);
+            element.addEventListener("click", activate);
+            element.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                activate();
+                }
+            });
+        });
+    }
 
-const teacherHomeLink = document.querySelector('.cap-home');
-const openTeacherHome = () => {
-  window.location.href = '../../home/home.html';
-};
+    function initialize(app, navigate) {
+        bindRoute(app, navigate, ".botn", "#book");
+        bindRoute(app, navigate, ".icono-maestro:not(.cap-home)", "#admin");
+        bindRoute(app, navigate, ".cap-home", "#home");
 
-adminBooksLink?.addEventListener('click', openBooksAdmin);
-adminBooksLink?.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    openBooksAdmin();
-  }
-});
+        app.querySelectorAll("[data-route]").forEach((element) => {
+            element.addEventListener("click", () => navigate(element.dataset.route));
+        });
 
-teacherHomeLink?.addEventListener('click', openTeacherHome);
-teacherHomeLink?.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    openTeacherHome();
-  }
-});
+        const profileDialog = app.querySelector(".registro-del-maestro");
+        profileDialog?.querySelector(".cancelar")?.addEventListener("click", () => {
+            closeProfileDialog(app);
+        });
+        profileDialog?.addEventListener("click", (event) => {
+            if (event.target === profileDialog) {
+            closeProfileDialog(app);
+            }
+        });
 
-document.querySelectorAll('.botn').forEach((bookButton) => {
-  bookButton.addEventListener('click', () => {
-    window.location.href = '../book_detail/book_detail.html';
-  });
-});
+        const saveProfileButton = profileDialog?.querySelector(
+            ".guardar-y-continuar",
+        );
+        saveProfileButton?.addEventListener("click", async () => {
+            const nombre = profileDialog
+            .querySelector('[name="nombre"]')
+            ?.value.trim();
+            const apellido = profileDialog
+            .querySelector('[name="apellido"]')
+            ?.value.trim();
+            const idGrado = Number(
+            profileDialog.querySelector('[name="grado"]')?.value,
+            );
 
-const profileDialog = document.querySelector('.registro-del-maestro');
-const closeProfileDialog = () => {
-  profileDialog?.remove();
-  document.body.style.overflow = '';
-};
+            if (!nombre || !apellido || !idGrado) {
+            return;
+            }
 
-profileDialog?.querySelector('.cancelar')?.addEventListener('click', closeProfileDialog);
-const saveProfileButton = profileDialog?.querySelector('.guardar-y-continuar');
-saveProfileButton?.addEventListener('click', async () => {
-  const nombre = profileDialog.querySelector('[name="nombre"]')?.value.trim();
-  const apellido = profileDialog.querySelector('[name="apellido"]')?.value.trim();
-  const id_grado = Number(profileDialog.querySelector('[name="grado"]')?.value);
+            saveProfileButton.disabled = true;
+            const activeResult = await window.api.usuario.getActive();
+            const payload = {
+            nombre,
+            apellido_paterno: apellido,
+            id_grado: idGrado,
+            };
 
-  if (!nombre || !apellido || !id_grado) {
-    return;
-  }
+            if (activeResult.success && activeResult.data?.id_usuario) {
+            payload.id_usuario = activeResult.data.id_usuario;
+            }
 
-  if (!window.api?.usuario) {
-    console.error('La API de usuario no está disponible.');
-    return;
-  }
+            const result = await window.api.usuario.create(payload);
+            saveProfileButton.disabled = false;
 
-  saveProfileButton.disabled = true;
-  const result = await window.api.usuario.create({
-    nombre,
-    apellido_paterno: apellido,
-    id_grado
-  });
-  saveProfileButton.disabled = false;
+            if (!result.success) {
+            console.error(result.error);
+            return;
+            }
 
-  if (!result.success) {
-    console.error(result.error);
-    return;
-  }
+            closeProfileDialog(app);
+        });
 
-  closeProfileDialog();
-});
-profileDialog?.addEventListener('click', (event) => {
-  if (event.target === profileDialog) {
-    closeProfileDialog();
-  }
-});
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closeProfileDialog();
-  }
-});
+        const escapeHandler = (event) => {
+            if (event.key === "Escape") {
+            closeProfileDialog(app);
+            }
+        };
+        if (window.homeEscapeHandler) {
+            document.removeEventListener("keydown", window.homeEscapeHandler);
+        }
+        window.homeEscapeHandler = escapeHandler;
+        document.addEventListener("keydown", escapeHandler);
+    }
 
-
-
+    window.HomeController = { initialize };
+})();

@@ -9,7 +9,7 @@ Menu.setApplicationMenu(null);
 
 const viewsRoot = path.join(__dirname, 'views');
 const allowedTemplates = new Set([
-  'pages/home.njk'
+  'home/home.njk'
 ]);
 
 const nunjucksEnvironment = nunjucks.configure(viewsRoot, { autoescape: true });
