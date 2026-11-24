@@ -1,22 +1,18 @@
-lucide.createIcons();
+(function () {
+  function initialize(app, navigate) {
+    const backToCatalog = app.querySelector('#volverAlCatlogo');
+    backToCatalog?.addEventListener('click', () => navigate('#home'));
 
-const backToCatalog = document.querySelector('#volverAlCatlogo');
-if (backToCatalog) {
-  backToCatalog.addEventListener('click', () => {
-    window.location.href = '../home/home.html';
-  });
-}
+    const projectForGroup = app.querySelector('#proyectarGrupo');
+    projectForGroup?.addEventListener('click', () => {
+      window.location.href = 'views/projection/projection.html';
+    });
 
-const projectForGroup = document.querySelector('#proyectarGrupo');
-if (projectForGroup) {
-  projectForGroup.addEventListener('click', () => {
-    window.location.href = '../projection/projection.html';
-  });
-}
+    const activityForGroup = app.querySelector('#activitySession');
+    activityForGroup?.addEventListener('click', () => {
+      window.location.href = 'views/activity_students/activity_students.html';
+    });
+  }
 
-const activityForGroup = document.querySelector('#activitySession');
-if (activityForGroup) {
-  activityForGroup.addEventListener('click', () => {
-    window.location.href = '../activity_students/activity_students.html';
-  });
-}
+  window.BookDetailController = { initialize };
+})();

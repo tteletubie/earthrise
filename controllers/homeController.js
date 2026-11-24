@@ -19,7 +19,7 @@
     }
 
     function initialize(app, navigate) {
-        bindRoute(app, navigate, ".botn", "#book");
+        bindRoute(app, navigate, ".botn:not(a)", "#book");
         bindRoute(app, navigate, ".icono-maestro:not(.cap-home)", "#admin");
         bindRoute(app, navigate, ".cap-home", "#home");
 
