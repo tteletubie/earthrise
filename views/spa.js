@@ -2,16 +2,17 @@
   const app = document.getElementById('app');
   const routes = {
     '#home': {
-      template: 'home/home.njk'
+      template: 'home/home.njk',
+      loadSharedFonts: true
     },
     '#book': {
       template: 'book_detail/book_detail.njk',
       stylesheet: 'views/book_detail/styles.css',
-      controller: 'bookDetail'
+      controller: 'bookDetail',
+      loadSharedFonts: true
     }
   };
   let activeViewStylesheet = null;
-  let fontsReady;
 
   function showLoading() {
     app.textContent = 'Loading...';
@@ -48,23 +49,6 @@
     });
   }
 
-  function loadFonts() {
-    if (!fontsReady) {
-      fontsReady = Promise.all(['400', '600', '700'].map((weight) => {
-        const fontUrl = new URL(
-          `views/fonts/source-sans-3-${weight}.ttf`,
-          window.location.href,
-        ).href;
-
-        return new FontFace('Source Sans 3', `url("${fontUrl}")`, { weight })
-          .load()
-          .then((font) => document.fonts.add(font))
-          .catch((error) => console.error('Font error', weight, error));
-      }));
-    }
-    return fontsReady;
-  }
-
   function navigate(hash) {
     if (window.location.hash !== hash) {
       window.history.pushState(null, '', hash);
@@ -89,7 +73,9 @@
 
     try {
       await loadViewStylesheet(route.stylesheet);
-      await loadFonts();
+      if (route.loadSharedFonts) {
+        await window.loadFonts();
+      }
 
       const result = await window.api.templates.render(route.template);
       if (!result || result.success !== true) {
